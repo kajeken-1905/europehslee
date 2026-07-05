@@ -109,6 +109,8 @@
       padding: 8px 12px;
       color: #2c1600;
     }
+    .chat-scroll::-webkit-scrollbar { width: 4px; }
+    .chat-scroll::-webkit-scrollbar-thumb { background: #dbc2ad; border-radius: 4px; }
   </style>
 </head>
 <body class="text-on-surface hero-bg min-h-screen">
@@ -120,6 +122,285 @@
     
     // We use CITIES from window.CITIES populated by citiesData.js
     const CITIES = window.CITIES || [];
+
+    const OPENAI_API_URL = 'https://api.openai.com/v1/chat/completions';
+    const API_KEY_STORAGE = 'espana_voyage_openai_api_key';
+    const MODEL_STORAGE = 'espana_voyage_openai_model';
+
+    const summarizeCity = (city) => {
+      if (!city) return '';
+      const lines = [
+        `【${city.nameKo} / ${city.nameEs} / ${city.nameEn}】`,
+        city.intro,
+        city.population && `인구: ${city.population}`,
+        city.area && `면적: ${city.area}`,
+      ];
+      if (city.attractions?.length) {
+        lines.push('명소: ' + city.attractions.map(a => `${a.name} — ${a.desc}`).join(' | '));
+      }
+      if (city.football?.teams?.length) {
+        lines.push('축구: ' + city.football.teams.map(t =>
+          `${t.teamKo || t.team} (${t.stadiumKo || t.stadium})`
+        ).join(', '));
+      } else if (city.football?.note) {
+        lines.push('축구: ' + city.football.note);
+      }
+      if (city.restaurants) {
+        const labels = { tapas: '타파스', fineDining: '파인다이닝', regional: '지역요리', cafes: '카페', bakeries: '베이커리' };
+        Object.entries(city.restaurants).forEach(([key, list]) => {
+          if (list?.length) {
+            lines.push(`${labels[key] || key}: ` + list.map(r => `${r.name}(★${r.rating}, ${r.menu || r.desc})`).join(', '));
+          }
+        });
+      }
+      return lines.filter(Boolean).join('\n');
+    };
+
+    const buildSystemPrompt = (selectedCity, activeTab) => {
+      const cityIndex = CITIES.map(c => `- ${c.nameKo} (${c.nameEn})`).join('\n');
+      let prompt = `당신은 España Voyage 스페인 여행 가이드 AI입니다. 한국어로 친절하고 구체적으로 답변하세요.
+대시보드에 등록된 ${CITIES.length}개 도시 정보를 바탕으로 명소, 맛집, 축구, 일정을 추천합니다.
+모르는 정보는 지어내지 말고, 대시보드 데이터 범위 안에서 답하세요.
+
+등록 도시 목록:
+${cityIndex}`;
+
+      if (selectedCity) {
+        prompt += `\n\n사용자가 현재 보고 있는 도시:\n${summarizeCity(selectedCity)}`;
+      }
+      if (activeTab && activeTab !== 'guide') {
+        prompt += `\n\n사용자는 Excel 일정 탭「${activeTab}」을 보고 있습니다.`;
+      }
+      return prompt;
+    };
+
+    const TravelChatbot = ({ selectedCity, activeTab }) => {
+      const [open, setOpen] = useState(false);
+      const [showSettings, setShowSettings] = useState(false);
+      const [apiKey, setApiKey] = useState(() => localStorage.getItem(API_KEY_STORAGE) || '');
+      const [model, setModel] = useState(() => localStorage.getItem(MODEL_STORAGE) || 'gpt-4o-mini');
+      const [input, setInput] = useState('');
+      const [loading, setLoading] = useState(false);
+      const [error, setError] = useState('');
+      const [messages, setMessages] = useState([
+        {
+          role: 'assistant',
+          content: '¡Hola! 스페인 여행 도우미입니다 🌞\n도시 추천, 맛집, 일정 질문을 편하게 물어보세요.\n⚙️ 버튼에서 OpenAI API 키를 먼저 등록해 주세요.',
+        },
+      ]);
+      const messagesEndRef = useRef(null);
+
+      useEffect(() => {
+        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+      }, [messages, loading]);
+
+      const saveSettings = () => {
+        localStorage.setItem(API_KEY_STORAGE, apiKey.trim());
+        localStorage.setItem(MODEL_STORAGE, model.trim());
+        setShowSettings(false);
+        setError('');
+      };
+
+      const sendMessage = async () => {
+        const text = input.trim();
+        if (!text || loading) return;
+        if (!apiKey.trim()) {
+          setError('OpenAI API 키를 ⚙️ 설정에서 입력해 주세요.');
+          setShowSettings(true);
+          return;
+        }
+
+        const userMessage = { role: 'user', content: text };
+        const nextMessages = [...messages, userMessage];
+        setMessages(nextMessages);
+        setInput('');
+        setLoading(true);
+        setError('');
+
+        const apiMessages = [
+          { role: 'system', content: buildSystemPrompt(selectedCity, activeTab) },
+          ...nextMessages
+            .filter(m => m.role === 'user' || m.role === 'assistant')
+            .slice(-12)
+            .map(m => ({ role: m.role, content: m.content })),
+        ];
+
+        try {
+          const res = await fetch(OPENAI_API_URL, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: `Bearer ${apiKey.trim()}`,
+            },
+            body: JSON.stringify({
+              model: model.trim() || 'gpt-4o-mini',
+              messages: apiMessages,
+              temperature: 0.7,
+              max_tokens: 1200,
+            }),
+          });
+
+          const data = await res.json();
+          if (!res.ok) {
+            throw new Error(data.error?.message || `API 오류 (${res.status})`);
+          }
+
+          const reply = data.choices?.[0]?.message?.content?.trim();
+          if (!reply) throw new Error('응답이 비어 있습니다.');
+          setMessages(prev => [...prev, { role: 'assistant', content: reply }]);
+        } catch (err) {
+          setError(err.message || '요청에 실패했습니다.');
+        } finally {
+          setLoading(false);
+        }
+      };
+
+      const handleKeyDown = (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+          e.preventDefault();
+          sendMessage();
+        }
+      };
+
+      return (
+        <>
+          <AnimatePresence>
+            {open && (
+              <motion.div
+                initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 20, scale: 0.95 }}
+                className="fixed bottom-24 right-4 md:right-6 z-[100] w-[min(100vw-2rem,380px)] h-[min(70vh,520px)] glass-panel rounded-[2rem] border-2 border-white/70 shadow-2xl flex flex-col overflow-hidden"
+              >
+                <div className="px-4 py-3 bg-gradient-to-r from-primary to-orange-600 text-white flex items-center justify-between shrink-0">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl">🤖</span>
+                    <div>
+                      <p className="font-extrabold text-sm leading-tight">España Travel AI</p>
+                      <p className="text-[10px] text-white/80">OpenAI GPT</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <button
+                      type="button"
+                      onClick={() => setShowSettings(v => !v)}
+                      className="w-8 h-8 rounded-xl bg-white/20 hover:bg-white/30 flex items-center justify-center text-sm"
+                      title="API 설정"
+                    >
+                      ⚙️
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setOpen(false)}
+                      className="w-8 h-8 rounded-xl bg-white/20 hover:bg-white/30 flex items-center justify-center font-bold"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                </div>
+
+                {showSettings && (
+                  <div className="p-4 border-b border-outline-variant/30 bg-surface-container-low shrink-0 space-y-3">
+                    <div>
+                      <label className="text-[10px] font-bold uppercase tracking-wider text-outline block mb-1">OpenAI API Key</label>
+                      <input
+                        type="password"
+                        value={apiKey}
+                        onChange={(e) => setApiKey(e.target.value)}
+                        placeholder="sk-..."
+                        className="w-full px-3 py-2 rounded-xl border border-outline-variant/40 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-primary-container/50"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-[10px] font-bold uppercase tracking-wider text-outline block mb-1">Model</label>
+                      <select
+                        value={model}
+                        onChange={(e) => setModel(e.target.value)}
+                        className="w-full px-3 py-2 rounded-xl border border-outline-variant/40 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-primary-container/50"
+                      >
+                        <option value="gpt-4o-mini">gpt-4o-mini (권장)</option>
+                        <option value="gpt-4o">gpt-4o</option>
+                        <option value="gpt-4-turbo">gpt-4-turbo</option>
+                        <option value="gpt-3.5-turbo">gpt-3.5-turbo</option>
+                      </select>
+                    </div>
+                    <p className="text-[10px] text-outline leading-snug">키는 브라우저 localStorage에만 저장됩니다. 공개 배포 시 서버 프록시 사용을 권장합니다.</p>
+                    <button
+                      type="button"
+                      onClick={saveSettings}
+                      className="w-full py-2 rounded-xl bg-gradient-to-r from-primary-container to-yellow-400 text-white text-sm font-bold shadow-md"
+                    >
+                      저장
+                    </button>
+                  </div>
+                )}
+
+                <div className="flex-1 overflow-y-auto p-4 space-y-3 chat-scroll bg-white/40">
+                  {messages.map((msg, i) => (
+                    <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                      <div className={`max-w-[85%] px-3 py-2 rounded-2xl text-sm leading-relaxed whitespace-pre-wrap ${
+                        msg.role === 'user'
+                          ? 'bg-gradient-to-br from-primary to-orange-600 text-white rounded-br-md'
+                          : 'bg-white border border-white/80 text-on-surface shadow-sm rounded-bl-md'
+                      }`}>
+                        {msg.content}
+                      </div>
+                    </div>
+                  ))}
+                  {loading && (
+                    <div className="flex justify-start">
+                      <div className="bg-white px-4 py-2 rounded-2xl text-sm text-outline shadow-sm flex items-center gap-2">
+                        <span className="w-2 h-2 bg-primary-container rounded-full animate-bounce"></span>
+                        <span className="w-2 h-2 bg-primary-container rounded-full animate-bounce" style={{ animationDelay: '0.15s' }}></span>
+                        <span className="w-2 h-2 bg-primary-container rounded-full animate-bounce" style={{ animationDelay: '0.3s' }}></span>
+                      </div>
+                    </div>
+                  )}
+                  <div ref={messagesEndRef} />
+                </div>
+
+                {error && (
+                  <div className="px-4 py-2 text-xs text-tertiary bg-red-50 border-t border-red-100 shrink-0">{error}</div>
+                )}
+
+                <div className="p-3 border-t border-white/60 bg-white/60 shrink-0">
+                  {selectedCity && (
+                    <p className="text-[10px] text-secondary font-bold mb-2 truncate">📍 {selectedCity.nameKo} 컨텍스트 연동됨</p>
+                  )}
+                  <div className="flex gap-2">
+                    <textarea
+                      value={input}
+                      onChange={(e) => setInput(e.target.value)}
+                      onKeyDown={handleKeyDown}
+                      rows={2}
+                      placeholder="예: 바르셀로나 2박 일정 추천해줘"
+                      className="flex-1 px-3 py-2 rounded-xl border border-outline-variant/40 bg-white text-sm resize-none focus:outline-none focus:ring-2 focus:ring-primary-container/50"
+                    />
+                    <button
+                      type="button"
+                      onClick={sendMessage}
+                      disabled={loading || !input.trim()}
+                      className="self-end px-4 py-2 rounded-xl bg-gradient-to-br from-primary to-orange-600 text-white font-bold text-sm disabled:opacity-40 shadow-md"
+                    >
+                      전송
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          <button
+            type="button"
+            onClick={() => setOpen(v => !v)}
+            className="fixed bottom-6 right-4 md:right-6 z-[100] w-14 h-14 rounded-full bg-gradient-to-br from-primary to-orange-600 text-white shadow-2xl shadow-orange-500/40 flex items-center justify-center text-2xl hover:scale-105 active:scale-95 transition-transform sun-kissed-glow border-4 border-white/80"
+            title="여행 AI 챗봇"
+          >
+            {open ? '✕' : '💬'}
+          </button>
+        </>
+      );
+    };
 
     const MapComponent = ({ selectedCity, activeLocation, onCitySelect }) => {
       const mapRef = useRef(null);
@@ -255,6 +536,7 @@
       const currentExcelSheet = sheets.find(s => s.name === activeTab);
 
       return (
+        <>
         <div className="h-screen flex flex-col font-sans relative z-10 p-3 lg:p-6">
           
           <header className="glass-panel shrink-0 px-8 py-5 flex flex-col md:flex-row gap-4 items-center justify-between rounded-[2.5rem] mb-6 z-50 overflow-hidden relative border-t-white border-l-white">
@@ -704,6 +986,8 @@
             </div>
           </div>
         </div>
+        <TravelChatbot selectedCity={selectedCity} activeTab={activeTab} />
+        </>
       );
     };
 

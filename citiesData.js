@@ -189,7 +189,7 @@ window.CITIES = [
           rating: 4.7,
           menu: "스페셜티 커피",
           desc: "바르셀로나 대표 스페셜티 커피.",
-          image: "https://blogthumb.pstatic.net/MjAyMDAyMTdfMjUz/MDAxNTgxOTIyODM3NDc2.g9ahJw9-P1tQzkJBJNDRGQsAxvNzgq2F2UQtKIw2L8Eg.6kB-6oSy6YILJog5dNqyO2Z2yEeDocn5GWcE9j5h2wUg.JPEG.mirae_gilt/%B9%CC%B7%A1%BD%C5%BF%EB%C1%A4%BA%B8_103.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Caf%C3%A9_con_leche.jpg/960px-Caf%C3%A9_con_leche.jpg",
           coords: [41.3835, 2.1812],
           blogUrl: "https://blog.naver.com/mirae_gilt/221812476913",
           blogTitle: "바르셀로나 Satan's Coffee Corner 맛집 후기"
@@ -199,7 +199,7 @@ window.CITIES = [
           rating: 4.6,
           menu: "스페셜티 커피",
           desc: "브런치와 커피가 유명한 카페.",
-          image: "https://blogthumb.pstatic.net/MjAyNjAzMDRfMTUz/MDAxNzcyNjMzNzEyOTgx.5yL-dbEP1t762ska3tvXqCC26W0-PC_NJ14N-3XhE1Ug.OQJyI_qQXkjetfT5-uInJMfHwAqH-8h6Ix6C9uJTsWsg.JPEG/IMG%A3%DF8575.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Latte_art_3.jpg/960px-Latte_art_3.jpg",
           coords: [41.3942, 2.1615],
           blogUrl: "https://blog.naver.com/2002river/224313137063",
           blogTitle: "바르셀로나 Federal Café 맛집 후기"
@@ -209,7 +209,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "필터 커피",
           desc: "로스팅 전문 서드웨이브 카페.",
-          image: "https://blogthumb.pstatic.net/MjAyNjAyMTNfMjYz/MDAxNzcwOTg3NDQ3OTM1.pDhYpYo7viTiSs1emzplFpqOl8yvbAeSI-fSaFAN-8Qg.vg4gYfeUbLglHvAbxHTjiA_qkr2DKGtyc06SD1Eg-rog.JPEG/KakaoTalk_20260212_222856881.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Flat_white_coffee_with_pretty_feather_pattern.jpg/960px-Flat_white_coffee_with_pretty_feather_pattern.jpg",
           coords: [41.3908, 2.1648],
           blogUrl: "https://blog.naver.com/aldus5253/224183151531",
           blogTitle: "바르셀로나 Origo Coffee 맛집 후기"
@@ -221,7 +221,7 @@ window.CITIES = [
           rating: 4.7,
           menu: "수제 빵",
           desc: "1902년 전통 파티스리.",
-          image: "https://blogthumb.pstatic.net/MjAyNjAyMDZfNTEg/MDAxNzcwMzU0MTUyNTg4.XP6FnWdiV3-UNgKdL8fIdPtn7P-1Jtny8RMdtbz7slIg.igQIgsAlxdVys6rT32UJ7X2YOM8BvqEWrXsEuqEX0sIg.JPEG/900%A3%DF20250903%A3%DF164921%A3%A82%A3%A9.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Croissant-Petr_Kratochvil.jpg/960px-Croissant-Petr_Kratochvil.jpg",
           coords: [41.3756, 2.1698],
           blogUrl: "https://blog.naver.com/blue85888/224298411238",
           blogTitle: "바르셀로나 Escribà 맛집 후기"
@@ -231,7 +231,7 @@ window.CITIES = [
           rating: 4.6,
           menu: "사워도우",
           desc: "카탈루냐 대표 베이커리.",
-          image: "https://blogthumb.pstatic.net/MjAyNjA3MDFfMjA1/MDAxNzgyODc4MDU4NDY3.eOcDUONxoT4-DQEnktdSYt0T55hY0gfs8nyazKAAp7og.syR29GwW0w6BVJ4GOvUyt-XjAR61IiFvV-L9fx2nZFEg.JPEG/IMG%A3%DF4022.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Bread_in_basket.jpg/960px-Bread_in_basket.jpg",
           coords: [41.3848, 2.1818],
           blogUrl: "https://blog.naver.com/dear_adorable_/224336582520",
           blogTitle: "바르셀로나 Hofmann 맛집 후기"
@@ -241,7 +241,7 @@ window.CITIES = [
           rating: 4.8,
           menu: "전통 과자",
           desc: "수제 사ourdough 빵.",
-          image: "https://blogthumb.pstatic.net/MjAyNjA0MDFfMSAg/MDAxNzc1MDE1MTk3MTM2.6z-9if22Ahw1YDsNsY-mGd4WcHV1Fmkj4yuHlCOHPX4g.7J6jztqv5xKs_ILKL7bFu9cljnniYf6P3LHaAcVmVxsg.JPEG/2345234523.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Tortilla_de_patatas.jpg/960px-Tortilla_de_patatas.jpg",
           coords: [41.3789, 2.1895],
           blogUrl: "https://blog.naver.com/lovely_oov/224236872231",
           blogTitle: "바르셀로나 Baluard Barceloneta 맛집 후기"
@@ -478,7 +478,7 @@ window.CITIES = [
           rating: 4.7,
           menu: "스페셜티 커피",
           desc: "마드리드 스페셜티 커피 명소.",
-          image: "https://blogthumb.pstatic.net/MjAyNDEyMTBfMjkz/MDAxNzMzODE2NDg3ODA5.pwsZUMBR2PwW8RxaHLXxQFGW6uWC59VQ45Xqak7B1lYg.2TTcn9cAxnPui_iYDvnRNwH-XmWF3RUzyFHyUt5r6hUg.PNG/%BD%BA%C5%A9%B8%B0%BC%A6_2024-12-10_%BF%C0%C8%C4_3.48.07.png?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Caf%C3%A9_con_leche.jpg/960px-Caf%C3%A9_con_leche.jpg",
           coords: [40.4255, -3.6945],
           blogUrl: "https://blog.naver.com/moon828706/223688887870",
           blogTitle: "마드리드 Toma Café 맛집 후기"
@@ -488,7 +488,7 @@ window.CITIES = [
           rating: 4.6,
           menu: "카페 con leche",
           desc: "1887년 빈티지 카페.",
-          image: "https://blogthumb.pstatic.net/MjAyNTEyMTVfOSAg/MDAxNzY1NzkyNjM3NjIx.G-XUqom2IRU-3xQN3npTju5fPdsRpzy8ToX1qagq3Bsg.Nx-eGJT75-Tl-Ui6hqi94e-ufz-ySrQWA5hrJ7HzbIEg.JPEG/IMG%A3%DF2038.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Latte_art_3.jpg/960px-Latte_art_3.jpg",
           coords: [40.4298, -3.7012],
           blogUrl: "https://blog.naver.com/hyeon_001_/224111287209",
           blogTitle: "마드리드 Cafe Comercial 맛집 후기"
@@ -498,7 +498,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "필터 커피",
           desc: "1914년 클래식 카페.",
-          image: "https://blogthumb.pstatic.net/MjAyNTA2MjBfMTgy/MDAxNzUwMzg2MDcwMTMx.6mRZ_jUFsK2pgSMcoV9R9nxaKu_4HHEqTpd48bEy8rQg.nYE1hSovDv0VDKrQwZcgWVgh8Iyb9DJ-OCwXUUHXDvgg.JPEG/IMG%A3%DF1201.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Flat_white_coffee_with_pretty_feather_pattern.jpg/960px-Flat_white_coffee_with_pretty_feather_pattern.jpg",
           coords: [40.4205, -3.6948],
           blogUrl: "https://blog.naver.com/mukjadiary/223905634844",
           blogTitle: "마드리드 La Duquesita 맛집 후기"
@@ -510,7 +510,7 @@ window.CITIES = [
           rating: 4.6,
           menu: "수제 빵",
           desc: "1894년 puerta del sol 전통.",
-          image: "https://blogthumb.pstatic.net/MjAyNTEwMTNfNzEg/MDAxNzYwMzYzNzAzOTM2.V6uP2nX98c6X83gp41vgryCYpeZ8lRIBX3heih8CXHYg.5BoKvSdMF5sPWTP4IbxaFQybHh5QsMErUxYkLzrKSeog.JPEG/900%A3%DF20240319%A3%DF152149.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Croissant-Petr_Kratochvil.jpg/960px-Croissant-Petr_Kratochvil.jpg",
           coords: [40.4169, -3.7034],
           blogUrl: "https://blog.naver.com/grenni/224040277206",
           blogTitle: "마드리드 La Mallorquina 맛집 후기"
@@ -520,7 +520,7 @@ window.CITIES = [
           rating: 4.7,
           menu: "전통 과자",
           desc: "마드리드 대표 베이커리.",
-          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Museo_Naval_del_Caribe.JPG/960px-Museo_Naval_del_Caribe.JPG",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Bread_in_basket.jpg/960px-Bread_in_basket.jpg",
           coords: [40.4215, -3.6985],
           blogUrl: "https://search.naver.com/search.naver?where=blog&query=%EB%A7%88%EB%93%9C%EB%A6%AC%EB%93%9C%20Horno%20San%20Onofre%20%EB%A7%9B%EC%A7%91",
           blogTitle: "마드리드 Horno San Onofre 블로그 검색"
@@ -530,7 +530,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "크루아상",
           desc: "초콜릿·페이스트리 전문.",
-          image: "https://blogthumb.pstatic.net/MjAyNjA0MDdfMjE4/MDAxNzc1NTQ4MTYwNzMw.CcT32-ejxIvjKX3VZFncIY0W3Gyaih552FSLNrChJ5wg.Ph0IRgTXVG4rXzmh2K683APlJEJ8dF6XN1wPbokWlwUg.JPEG/IMG_0299.jpeg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Tortilla_de_patatas.jpg/960px-Tortilla_de_patatas.jpg",
           coords: [40.4285, -3.6875],
           blogUrl: "https://blog.naver.com/dewdrop29/224244139707",
           blogTitle: "마드리드 Moulin Chocolat 맛집 후기"
@@ -761,7 +761,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "카페 con leche",
           desc: "독특한 분위기의 세비야 카페.",
-          image: "https://blogthumb.pstatic.net/MjAyNTAxMTBfMjA2/MDAxNzM2NTE1MzMwNjI2.gs_zNLFhBpvJ5Zpa3RzCvb8vPRLblp1X26hgpMtq5_4g.sPZLTwzu-FIxs9b7Y8V2Y8WaYuaaTDwHJ6QKoTThjREg.PNG/%C1%A6%B8%F1%C0%BB-%C0%D4%B7%C2%C7%D8%C1%D6%BC%BC%BF%E4_-001_%287%29.png?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Caf%C3%A9_con_leche.jpg/960px-Caf%C3%A9_con_leche.jpg",
           coords: [37.3862, -5.9918],
           blogUrl: "https://blog.naver.com/earthsun99/223721993637",
           blogTitle: "세비야 Café Bar Garlochí 맛집 후기"
@@ -771,7 +771,7 @@ window.CITIES = [
           rating: 4.6,
           menu: "카페 라떼",
           desc: "1914년 아르누보 카페.",
-          image: "https://blogthumb.pstatic.net/20160303_145/redbong24_1456968614204XvqU6_JPEG/IMG_5038.JPG?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Latte_art_3.jpg/960px-Latte_art_3.jpg",
           coords: [37.3915, -5.9965],
           blogUrl: "https://blog.naver.com/redbong24/220644219390",
           blogTitle: "세비야 Café Royalty 맛집 후기"
@@ -781,7 +781,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "필터 커피",
           desc: "세비야 대성당 근처 카페.",
-          image: "https://blogthumb.pstatic.net/MjAyNjAyMTZfMjc3/MDAxNzcxMTcyMzY1NDQ3.btbF0tuC86DdYtzBbU2rEmtXE4hNtAlxDatF8eV4J6Ug.tn2Ly9V_vj3ZMEiCpXLTMKRrh3RsONgSHBU9LWFZZzQg.JPEG/IMG_8953.JPEG?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Flat_white_coffee_with_pretty_feather_pattern.jpg/960px-Flat_white_coffee_with_pretty_feather_pattern.jpg",
           coords: [37.3858, -5.9925],
           blogUrl: "https://blog.naver.com/bbrrlee/224185118659",
           blogTitle: "세비야 Café de Indias 맛집 후기"
@@ -793,7 +793,7 @@ window.CITIES = [
           rating: 4.6,
           menu: "전통 과자",
           desc: "1885년 전통 과자점.",
-          image: "https://blogthumb.pstatic.net/MjAyMzA3MDFfMzEg/MDAxNjg4MTk3MDAzMDQx.njNp-3nJKMXdLBe_wV43zglhzwwX-43neUs6UWR6Xs0g.CzKjnvyIKrcev3TvNoYYKKCBqGOO-1atfb8xKbnxQ6gg.JPEG.twomilk7860/P20230526_225448631_E7AB1756-C1AB-4742-B7BD-8CD76DDEEA55.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Croissant-Petr_Kratochvil.jpg/960px-Croissant-Petr_Kratochvil.jpg",
           coords: [37.3892, -5.9945],
           blogUrl: "https://blog.naver.com/twomilk7860/223143991879",
           blogTitle: "세비야 Confitería La Campana 맛집 후기"
@@ -803,7 +803,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "파티스리",
           desc: "세비야 대표 yema·tortas.",
-          image: "https://blogthumb.pstatic.net/MjAyNTAyMTNfMjAz/MDAxNzM5NDMzMjYwMzkx.FMq16oCHwT3sQHfnJMwV2ikEf7FRqHbQDTPhREYi9uog.byk3ZIu1RgQlQDXwK94UEcQDSWSybBlVAlsk8l5EgS8g.JPEG/KakaoTalk_20250213_163854531_04.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Bread_in_basket.jpg/960px-Bread_in_basket.jpg",
           coords: [37.3885, -5.9938],
           blogUrl: "https://blog.naver.com/myrnak/223759491802",
           blogTitle: "세비야 Cristóbal Colón 맛집 후기"
@@ -813,7 +813,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "크루아상",
           desc: "현지인 빵집.",
-          image: "https://blogthumb.pstatic.net/MjAyNTAzMTVfMTc4/MDAxNzQyMDEzODk1NjQ5.rsZSBRZ1sxCD5Iw7EzkuKJY6BO5FR1giRUEtIawToO4g.z52wIfeXhnkZBmYNLtu7XZmwGheG_dSoI1OueHUrhH8g.JPEG/IMG_4229.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Tortilla_de_patatas.jpg/960px-Tortilla_de_patatas.jpg",
           coords: [37.3875, -5.9905],
           blogUrl: "https://blog.naver.com/wejita/223800172609",
           blogTitle: "세비야 Panificadora San Antonio 맛집 후기"
@@ -1022,7 +1022,7 @@ window.CITIES = [
           rating: 4.7,
           menu: "스페셜티 커피",
           desc: "발렌시아 스페셜티 커피.",
-          image: "https://blogthumb.pstatic.net/MjAyNjA2MjZfNjkg/MDAxNzgyNDE1NjA1Njc0.MM_ueF4oPatwWwGr4_i4bMd9oVL-OxxLpC0AjsUE1iEg.u_SRT0F9eOQ_qraWgG5ZijNqzurjGm7S6zEzXG22dDog.PNG/ChatGPT_Image_2026%B3%E2_6%BF%F9_25%C0%CF_%BF%C0%C8%C4_08_26_27.png?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Caf%C3%A9_con_leche.jpg/960px-Caf%C3%A9_con_leche.jpg",
           coords: [39.4695, -0.3758],
           blogUrl: "https://blog.naver.com/yoo_ooong/224327548044",
           blogTitle: "발렌시아 Bluebell Coffee 맛집 후기"
@@ -1032,7 +1032,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "카페 라떼",
           desc: "보hemian 분위기 카페.",
-          image: "https://blogthumb.pstatic.net/MjAxNzA3MjhfMTg2/MDAxNTAxMTc4NzE5NjA0.XkuwxKjGm4MZFSeRPbx1pZQdXY3v4IuGqhky6MhtsKAg.2vC73_ZYTY8kY6fxdGDomQh9_9hfM_mOqN0aiHRBIWgg.JPEG.h2010n/IMG_2440.JPG?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Latte_art_3.jpg/960px-Latte_art_3.jpg",
           coords: [39.4768, -0.3762],
           blogUrl: "https://blog.naver.com/h2010n/221061454452",
           blogTitle: "발렌시아 Café de las Horas 맛집 후기"
@@ -1042,7 +1042,7 @@ window.CITIES = [
           rating: 4.6,
           menu: "브런치 세트",
           desc: "서점 겸 카페.",
-          image: "https://blogthumb.pstatic.net/MjAyNjA1MjBfMTYz/MDAxNzc5MjY4NzQ1Mjg5.hemiMBW3q_54eoHOdfSUelH1FJTKauQ8sY17DqRKYtgg.pF1OUXOm9fIBPDnqX_iBw9wy--a6XbwGGPKY_NY_cK8g.PNG/%C1%A6%B8%F1%C0%BB%A3%AD%C0%D4%B7%C2%C7%D8%C1%D6%BC%BC%BF%E4%A3%DF%A3%AD002%A3%A89%A3%A9.png?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Flat_white_coffee_with_pretty_feather_pattern.jpg/960px-Flat_white_coffee_with_pretty_feather_pattern.jpg",
           coords: [39.4615, -0.3715],
           blogUrl: "https://blog.naver.com/lemonetlime/224291573326",
           blogTitle: "발렌시아 Ubik Café 맛집 후기"
@@ -1054,7 +1054,7 @@ window.CITIES = [
           rating: 4.6,
           menu: "전통 과자",
           desc: "전통 발렌시아 빵집.",
-          image: "https://blogthumb.pstatic.net/MjAxNzA3MzFfMzYg/MDAxNTAxNTEwNTA0MTcz.zW_N-2QylGdwmqiNtx9sP-B854NvO_roLCVgX6kfFrUg.bPbZ5sxo9mtp_3xmxk_6gXmMpZxochM9oLsTfCTcH6sg.JPEG.canyaybravas/IMG_2693.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Croissant-Petr_Kratochvil.jpg/960px-Croissant-Petr_Kratochvil.jpg",
           coords: [39.4755, -0.3752],
           blogUrl: "https://blog.naver.com/canyaybravas/221064068838",
           blogTitle: "발렌시아 Horno de San Cristóbal 맛집 후기"
@@ -1064,7 +1064,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "파티스리",
           desc: "fartons·파티스리.",
-          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Malvarrosa_Beach%2C_Valencia%2C_Spain_%2829812271043%29.jpg/960px-Malvarrosa_Beach%2C_Valencia%2C_Spain_%2829812271043%29.jpg",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Bread_in_basket.jpg/960px-Bread_in_basket.jpg",
           coords: [39.4685, -0.3745],
           blogUrl: "https://search.naver.com/search.naver?where=blog&query=%EB%B0%9C%EB%A0%8C%EC%8B%9C%EC%95%84%20Forn%20Fondo%20%EB%A7%9B%EC%A7%91",
           blogTitle: "발렌시아 Forn Fondo 블로그 검색"
@@ -1074,7 +1074,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "수제 빵",
           desc: "1932년 과자점.",
-          image: "https://blogthumb.pstatic.net/MjAyMzExMDNfMjc4/MDAxNjk5MDEyMTQ4Njk2.Njqe3hN5Du36vhOe_9JIlE-0YrkrAkVfqUpzUSfgX9Qg.tyv3aT7woABg_EvBzDqytbGxHZQ2vXraG2sH3qZ9EC8g.JPEG.gahee000103/output_435668470.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Tortilla_de_patatas.jpg/960px-Tortilla_de_patatas.jpg",
           coords: [39.4725, -0.3775],
           blogUrl: "https://blog.naver.com/gahee000103/223255807947",
           blogTitle: "발렌시아 Pastelería El Contraste 맛집 후기"
@@ -1277,7 +1277,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "플랫 화이트",
           desc: "알바이신 전망 카페.",
-          image: "https://blogthumb.pstatic.net/MjAyNjAxMTlfMTAx/MDAxNzY4NzUxMzk5NTk4.teZakAzxHZ1b5qdzxPe0CboH4CRxQnYLanasSkEH7Fcg.uYoWAJFjTjD-IvjTR-95Dwm4emKpRs50rL4AGmHR4Msg.JPEG/IMG%A3%DF0331.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Caf%C3%A9_con_leche.jpg/960px-Caf%C3%A9_con_leche.jpg",
           coords: [37.1795, -3.5925],
           blogUrl: "https://blog.naver.com/a6969235/222901591485",
           blogTitle: "그라나다 Café 4 Gats 맛집 후기"
@@ -1287,7 +1287,7 @@ window.CITIES = [
           rating: 4.6,
           menu: "카페 라떼",
           desc: "1930년대 그라나다 카페.",
-          image: "https://blogthumb.pstatic.net/MjAyNDA3MjhfMTAz/MDAxNzIyMTUzNTUyNDUz.l4PPtI92STPMZ9dF8-haQpvJ59TCbVhbPGW1dY-i7K8g.Gjxco_zwNJay0_RB1PAn0BeXyBR3TujDnnk0m8E7cggg.JPEG/IMG_4001.JPEG?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Latte_art_3.jpg/960px-Latte_art_3.jpg",
           coords: [37.1768, -3.5985],
           blogUrl: "https://blog.naver.com/solsol419/223528344328",
           blogTitle: "그라나다 Café Fútbol 맛집 후기"
@@ -1297,7 +1297,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "플랫 화이트",
           desc: "현지인 아침 카페.",
-          image: "https://blogthumb.pstatic.net/MjAyNTA1MjJfMTg5/MDAxNzQ3OTA1MTk2NTM1.SRwm1fxYxRY7KY3tNEMQiwIkrh0HFjsDUa0fVjKScLkg.BhZyObZ28_toNB64XdhKs1Q3cpwi-dv5Khtj90bH8-gg.JPEG/IMG_7208.JPG?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Flat_white_coffee_with_pretty_feather_pattern.jpg/960px-Flat_white_coffee_with_pretty_feather_pattern.jpg",
           coords: [37.1775, -3.5972],
           blogUrl: "https://blog.naver.com/onvalog/223875211149",
           blogTitle: "그라나다 Café Bar Bilbao 맛집 후기"
@@ -1309,7 +1309,7 @@ window.CITIES = [
           rating: 4.6,
           menu: "피오노노",
           desc: "pionono·그라나다 과자.",
-          image: "https://blogthumb.pstatic.net/MjAyNjA1MjNfMTc2/MDAxNzc5NTM4MTE2NDAw.BdhFYAaUOw_OVpg0sZ3z77zQklv_teL0tWZKRvouCxYg.zeDFPeqw4D2r5lnkjm3NyH0XsREfy3nQcHeAzGI_-ksg.JPEG/IMG%A3%DF6151.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Croissant-Petr_Kratochvil.jpg/960px-Croissant-Petr_Kratochvil.jpg",
           coords: [37.1755, -3.5998],
           blogUrl: "https://blog.naver.com/yerini471/224294704274",
           blogTitle: "그라나다 Pastelería López-Mezquita 맛집 후기"
@@ -1319,7 +1319,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "파티스리",
           desc: "전통 빵집.",
-          image: "https://blogthumb.pstatic.net/20140216_144/jyhcool1004_1392478301967nxdF8_JPEG/IMG_1479.JPG?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Bread_in_basket.jpg/960px-Bread_in_basket.jpg",
           coords: [37.1748, -3.5975],
           blogUrl: "https://blog.naver.com/jyhcool1004/150185194997",
           blogTitle: "그라나다 Panadería San Miguel 맛집 후기"
@@ -1329,7 +1329,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "전통 과자",
           desc: "수제 과자·마라누엘.",
-          image: "https://blogthumb.pstatic.net/MjAyNTAxMDJfNzcg/MDAxNzM1Nzk0NjA1ODk5.HyZfHtZW1r3H2-lB01wrUPGRmu4l_h-hmgnfrL53Rygg.IptwsArwbB6tdSWqzWa89x2hTlDdtWvjBpPVRDDB5-Yg.JPEG/DSC09737_5_161384362846.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Tortilla_de_patatas.jpg/960px-Tortilla_de_patatas.jpg",
           coords: [37.1782, -3.5965],
           blogUrl: "https://blog.naver.com/nuseehjh/223712534526",
           blogTitle: "그라나다 Confitería San Antón 맛집 후기"
@@ -1532,7 +1532,7 @@ window.CITIES = [
           rating: 4.6,
           menu: "카페 con leche",
           desc: "말라가 최고(最古) 카페 중 하나.",
-          image: "https://blogthumb.pstatic.net/MjAxODA5MjZfMTk3/MDAxNTM3OTEwMDQzNDUy.zuCj1hrtn5k9aZ0bbPXPDhc2dizAibLAnvmzXpei2P4g.J6VZoMA57JwBbax86LEmY3BTDufcREoYzNDh2A2wz0Eg.JPEG.kyunghwa1106/IMG_5690.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Caf%C3%A9_con_leche.jpg/960px-Caf%C3%A9_con_leche.jpg",
           coords: [36.7215, -4.4215],
           blogUrl: "https://blog.naver.com/kyunghwa1106/221365538010",
           blogTitle: "말라가 Café Central 맛집 후기"
@@ -1542,7 +1542,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "브런치 세트",
           desc: "1879년 전통 카페.",
-          image: "https://blogthumb.pstatic.net/MjAyMzA3MjdfMTA5/MDAxNjkwMzg4NDI5MDcz.4r9DzjhGA10AVtBvngR9_4RyeBURfsPKMU8V-6u2hPMg.VeAwglodKeEoJNfBBAN0E-6woLwJU6yFI0spTAvxV3Eg.JPEG.chansoondae/9%B9%DA11%C0%CF_%B1%E8%C7%F6%B1%D9%B0%A1%C0%CC%B5%E5_%BD%BA%C6%E4%C0%CE%C6%D0%C5%B0%C1%F6%BF%A9%C7%E0_%B9%CC%BC%FA%BF%A9%C7%E0.jpeg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Latte_art_3.jpg/960px-Latte_art_3.jpg",
           coords: [36.7208, -4.4205],
           blogUrl: "https://blog.naver.com/chansoondae/223167215839",
           blogTitle: "말라가 Café Madrid 맛집 후기"
@@ -1552,7 +1552,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "필터 커피",
           desc: "항구 근처 클래식 카페.",
-          image: "https://blogthumb.pstatic.net/20141207_137/bona0222_1417961002987cgKcl_JPEG/IMG_1496_1.JPG?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Flat_white_coffee_with_pretty_feather_pattern.jpg/960px-Flat_white_coffee_with_pretty_feather_pattern.jpg",
           coords: [36.7185, -4.4188],
           blogUrl: "https://blog.naver.com/bona0222/220204237840",
           blogTitle: "말라가 Café Lepanto 맛집 후기"
@@ -1564,7 +1564,7 @@ window.CITIES = [
           rating: 4.7,
           menu: "추로스",
           desc: "1932년 churros·초uros.",
-          image: "https://blogthumb.pstatic.net/MjAyNTAyMjBfMTM0/MDAxNzQwMDI0NjExMDc5.oEthR0zFjQhhkdRyrnIVFOFrX7H9b4DbB6AAtRjkyuQg.G6ND4bDaAozC5ufGeqBxpYNLW4fnUIFuNdk0e_z7ISUg.PNG/%C1%A6%B8%F1%C0%BB-%C0%D4%B7%C2%C7%D8%C1%D6%BC%BC%BF%E4_-001_-_2025-02-20T130925.678.png?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Croissant-Petr_Kratochvil.jpg/960px-Croissant-Petr_Kratochvil.jpg",
           coords: [36.7198, -4.4225],
           blogUrl: "https://blog.naver.com/andy317/223772844592",
           blogTitle: "말라가 Casa Aranda 맛집 후기"
@@ -1574,7 +1574,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "사워도우",
           desc: "전통 안달루시아 빵.",
-          image: "https://blogthumb.pstatic.net/MjAyNDA3MzBfMTY3/MDAxNzIyMjkwMDAxMzQ2.n7fUH11kwn6Wj0Fv55IyYJbYUGWWe7ITLFzJArt6Eo4g.-Y34ddiUfXBHsIZe7PBRPnEq1lJl5UxBwFVvHkxXQJQg.JPEG/IMG_0450.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Bread_in_basket.jpg/960px-Bread_in_basket.jpg",
           coords: [36.7225, -4.4195],
           blogUrl: "https://blog.naver.com/skytony012/223530130472",
           blogTitle: "말라가 Horno de San Luis 맛집 후기"
@@ -1584,7 +1584,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "사워도우",
           desc: "말라가 과자·케이크.",
-          image: "https://blogthumb.pstatic.net/20150131_293/hjk8427__142265137221292ghF_JPEG/DSC00867.JPG?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Tortilla_de_patatas.jpg/960px-Tortilla_de_patatas.jpg",
           coords: [36.7212, -4.4235],
           blogUrl: "https://blog.naver.com/hjk8427_/220258132955",
           blogTitle: "말라가 Pastelería Cisne 맛집 후기"
@@ -1773,7 +1773,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "브런치 세트",
           desc: "네르하 구시가 인기 카페.",
-          image: "https://blogthumb.pstatic.net/MjAyMTA4MTNfMjM5/MDAxNjI4ODQxMDY1NzMz.m2RIPor050PaQj28UAvL46GMTzrTFk1-mh1g7W5RJTcg.y5eb2HetgsorWhsozS5FwkvD3CkXzfmG4Pj2OnHzj-wg.JPEG.kim4993300/IMG_7823.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Caf%C3%A9_con_leche.jpg/960px-Caf%C3%A9_con_leche.jpg",
           coords: [36.746, -3.874],
           blogUrl: "https://blog.naver.com/kim4993300/222468725044",
           blogTitle: "네르하 Café Bar Funky 맛집 후기"
@@ -1783,7 +1783,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "카페 con leche",
           desc: "발코니 데 유ropa 전망 테라스.",
-          image: "https://blogthumb.pstatic.net/MjAyNTEyMjJfMTQw/MDAxNzY2MzU1OTcwMTk2.Z5TN9VRwj0ABh6f_eVp-DdAZTZ0hl1woN0Mr3uLfvG8g.Uh9EqAcYG9G-qqHtk2FIRyPqAdUjmcqhQKCS9dMnjWkg.JPEG/IMG%A3%DF2907.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Latte_art_3.jpg/960px-Latte_art_3.jpg",
           coords: [36.7449, -3.8743],
           blogUrl: "https://blog.naver.com/dnrjddl91/224316076253",
           blogTitle: "네르하 Café Balcon de Europa 맛집 후기"
@@ -1793,7 +1793,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "카페 라떼",
           desc: "광장 테라스 카페.",
-          image: "https://blogthumb.pstatic.net/MjAyNjA2MDVfMjM2/MDAxNzgwNjIzNzk0MjQ3._EFizlmunszaN2EJBw4--zcalebvtxR3LbFMQJh4wO0g.4eQ9-ZMnaxK5ZHRZ7h0Z6jOWWAqmPdUxSAOp1wSncCEg.PNG/%B4%BA%C6%AE%B7%B2_%B8%F0%B4%F8%C7%D1_%BA%ED%B7%CE%B1%D7_%C6%F7%BD%BA%C6%AE_%BD%E6%B3%D7%C0%CF__%C0%CE%BD%BA%C5%B8%B1%D7%B7%A5_%C6%F7%BD%BA%C6%AE.png?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Flat_white_coffee_with_pretty_feather_pattern.jpg/960px-Flat_white_coffee_with_pretty_feather_pattern.jpg",
           coords: [36.7463, -3.8758],
           blogUrl: "https://blog.naver.com/januaryjung_2/224306609243",
           blogTitle: "네르하 Café Plaza Tutti Frutti 맛집 후기"
@@ -1805,7 +1805,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "수제 빵",
           desc: "네르하 전통 빵집.",
-          image: "https://blogthumb.pstatic.net/MjAyMjAyMTJfMTE3/MDAxNjQ0NjE3NDQ1NDIw.Vjko8U9UB3IHExILpxlb_bNMpqF4fK6JjpPFuo_VvsYg.ZAmEtQEweJvR5H1eY8wO_x2JgSCtFEeXj8zdlgoG04og.JPEG.qufkr95/IMG_4094.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Croissant-Petr_Kratochvil.jpg/960px-Croissant-Petr_Kratochvil.jpg",
           coords: [36.7459, -3.8761],
           blogUrl: "https://blog.naver.com/qufkr95/222645470354",
           blogTitle: "네르하 Panadería La Esperanza 맛집 후기"
@@ -1815,7 +1815,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "파티스리",
           desc: "수제 케이크·과자.",
-          image: "https://blogthumb.pstatic.net/MjAyNDEyMjRfNTcg/MDAxNzM1MDA0Nzg3NTUw.J7TonNQdAvh_F11SvCAibvjfbvhyTEqPVZcSwKDxldsg.L34gGNpSFFZIEFx8U45ZHw_ko2VXPXJuaoqeXqjM69Yg.JPEG/IMG_7702.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Bread_in_basket.jpg/960px-Bread_in_basket.jpg",
           coords: [36.7466, -3.8742],
           blogUrl: "https://blog.naver.com/happy_rosy_day/223704097697",
           blogTitle: "네르하 Pastelería Isabella 맛집 후기"
@@ -1825,7 +1825,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "추로스",
           desc: "추로스·porras 전문.",
-          image: "https://blogthumb.pstatic.net/MjAyNDA4MzBfMTU4/MDAxNzI0OTgwODM2NTQ1._ryCty_1O1Mby7ue7fXhbrpTaBJiFW-sMF_rDwdF2qsg.Yiqxqf69mQdMqIhXiciXzNq7AuY7iRGEgNLXl4kwUV4g.JPEG/cover_1724980826789.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Tortilla_de_patatas.jpg/960px-Tortilla_de_patatas.jpg",
           coords: [36.7472, -3.8735],
           blogUrl: "https://blog.naver.com/leech1892/223566349059",
           blogTitle: "네르하 Churrería Almudena 맛집 후기"
@@ -2028,7 +2028,7 @@ window.CITIES = [
           rating: 4.6,
           menu: "플랫 화이트",
           desc: "거대 오믈렛으로 유명.",
-          image: "https://blogthumb.pstatic.net/20140819_97/yyhsun90_1408409834063wXh23_JPEG/20140104_211026.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Caf%C3%A9_con_leche.jpg/960px-Caf%C3%A9_con_leche.jpg",
           coords: [37.8788, -4.7798],
           blogUrl: "https://blog.naver.com/ppogaegi/224224838819",
           blogTitle: "코르도바 Café Bar Santos 맛집 후기"
@@ -2038,7 +2038,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "브런치 세트",
           desc: "메스키타 근처 테라스.",
-          image: "https://blogthumb.pstatic.net/MjAyNDExMDlfMTA4/MDAxNzMxMTExMjgxODc0.cwZ-3d0NGpJcOyHkXDp6IW58k22sfsEMRlw_J2ntumwg.D3GOdQeyg8gjvKJHbad9YRHqCOy8EJuw8M3dJu2cmOYg.JPEG/IMG_0400.JPG?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Latte_art_3.jpg/960px-Latte_art_3.jpg",
           coords: [37.8795, -4.7792],
           blogUrl: "https://blog.naver.com/yuniverse_life/223366444481",
           blogTitle: "코르도바 Café Medina 맛집 후기"
@@ -2048,7 +2048,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "카페 라떼",
           desc: "코르도바 전통 카페.",
-          image: "https://blogthumb.pstatic.net/MjAxODA3MTZfMjcx/MDAxNTMxNzUwOTAyMDg5.YR3QnW-tRNyZxsorsLLDdCYuF8hq-J9xLymST_7Se6cg.CYG3huPmVxAOEjyzAb2oIvk1pgtSh6OMI4FJ_DgGEeAg.JPEG.fendervs/documentTitle_8735854791531750864620.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Flat_white_coffee_with_pretty_feather_pattern.jpg/960px-Flat_white_coffee_with_pretty_feather_pattern.jpg",
           coords: [37.8805, -4.7778],
           blogUrl: "https://blog.naver.com/fendervs/221320419337",
           blogTitle: "코르도바 Café Rubio 맛집 후기"
@@ -2060,7 +2060,7 @@ window.CITIES = [
           rating: 4.6,
           menu: "크루아상",
           desc: "pasteleros·코르도바 과자.",
-          image: "https://blogthumb.pstatic.net/20140220_111/str9103_1392848510423gx78V_JPEG/%B8%DE%BD%BA%C5%B0%C5%B8_%C5%B8%C6%C4%BD%BA.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Croissant-Petr_Kratochvil.jpg/960px-Croissant-Petr_Kratochvil.jpg",
           coords: [37.8792, -4.7785],
           blogUrl: "https://blog.naver.com/yuniverse_life/223366444481",
           blogTitle: "코르도바 Pastelería Raimundo 맛집 후기"
@@ -2070,7 +2070,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "사워도우",
           desc: "현지 빵집.",
-          image: "https://blogthumb.pstatic.net/MjAyNDEyMTBfNTcg/MDAxNzMzNzkzMDY1NDUx.MxTb_MROjXKok_DugZXxexfvyYWKA0QSLbZ28oJ-U6Ag.O_uiU4NYOxP5XwKH3qVKFatgQzu5ExlJnfK8z-ZwNGYg.PNG/%B0%A1%BA%BC%B8%B8%C7%D1_%B0%F7_%BF%A9%C7%E0%C1%F6_%C3%DF%C3%B5_%C4%AB%B5%E5%B4%BA%BD%BA_instagram_post_%2850%29.png?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Bread_in_basket.jpg/960px-Bread_in_basket.jpg",
           coords: [37.8815, -4.7765],
           blogUrl: "https://blog.naver.com/ssstory27/223687287237",
           blogTitle: "코르도바 Panadería San Juan 맛집 후기"
@@ -2080,7 +2080,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "사워도우",
           desc: "수제 페이스트리.",
-          image: "https://blogthumb.pstatic.net/MjAyMzAxMzFfMjE2/MDAxNjc1MTA3OTc0OTIz.ApwBiJqIDX8OXQPIk_-818REN-ed6uNpOayoD4M-wR4g.pLDEz9OsPvkLFqOS-f9NFzaHUeMMERd--G9qWO1s3Ykg.JPEG.eunkaren/IMG_0176.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Tortilla_de_patatas.jpg/960px-Tortilla_de_patatas.jpg",
           coords: [37.8785, -4.7805],
           blogUrl: "https://blog.naver.com/eunkaren/223029413020",
           blogTitle: "코르도바 Confitería La Flor 맛집 후기"
@@ -2283,7 +2283,7 @@ window.CITIES = [
           rating: 4.6,
           menu: "카페 라떼",
           desc: "1903년 빈티지 카페.",
-          image: "https://blogthumb.pstatic.net/MjAxNzEwMDZfMTkg/MDAxNTA3MjkyODc4MzYy.BubgpQ1IR74sDpe3VC_s9kk2QTMNRjc4AT5wRsNvE-Qg.GeRv9b7Y3hAWaJ5ONU6w_93GUBlBMy6YcgtCeONw5isg.PNG.hibiki3255/image.png?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Caf%C3%A9_con_leche.jpg/960px-Caf%C3%A9_con_leche.jpg",
           coords: [43.2625, -2.9285],
           blogUrl: "https://blog.naver.com/hibiki3255/221111731322",
           blogTitle: "빌바오 Café Iruña 맛집 후기"
@@ -2293,7 +2293,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "플랫 화이트",
           desc: "구시가지 클래식.",
-          image: "https://blogthumb.pstatic.net/MjAxNzA4MjNfMzUg/MDAxNTAzNDM4NzMyMjkz.acx3eHBp9tZqC83HFXcpt8SVmDf6rOeDVdrpTtX_k4gg.qm2RcanAMvCVNm7XwfWzJaEFlgXv9dT8m4xwit4j9ckg.JPEG.nojudy/IMG_3565.JPG?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Latte_art_3.jpg/960px-Latte_art_3.jpg",
           coords: [43.2598, -2.9245],
           blogUrl: "https://blog.naver.com/onvalog/223875211149",
           blogTitle: "빌바오 Café Bar Bilbao 맛집 후기"
@@ -2303,7 +2303,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "필터 커피",
           desc: "현대 바스크 카페.",
-          image: "https://blogthumb.pstatic.net/MjAyMDA2MzBfMTIw/MDAxNTkzNTAwMzcwNzMy.bZxJIRfBlt1qT334Znkw97FkotZYP5UjFxpcyIaj61og.xVngLueOJ-yklm3P6_vT11iNJkEetrOGOdu8rRX8cMMg.JPEG.ginnayoo/IMG_9484.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Flat_white_coffee_with_pretty_feather_pattern.jpg/960px-Flat_white_coffee_with_pretty_feather_pattern.jpg",
           coords: [43.2615, -2.9265],
           blogUrl: "https://blog.naver.com/ginnayoo/222016900139",
           blogTitle: "빌바오 Café Bambán 맛집 후기"
@@ -2315,7 +2315,7 @@ window.CITIES = [
           rating: 4.7,
           menu: "전통 과자",
           desc: "1852년 바스크 과자.",
-          image: "https://blogthumb.pstatic.net/MjAyNDA4MTdfNjQg/MDAxNzIzODc5ODM2ODk2.EoMa2HYvZjD2T_aEsfe6ALj_bDxuH5fM-djKuYRimJog.proQIYMBH-qY3JDKoFeszWqdFlWPrl9Ni0Pl9p876PQg.JPEG/IMG_5901.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Croissant-Petr_Kratochvil.jpg/960px-Croissant-Petr_Kratochvil.jpg",
           coords: [43.2635, -2.9295],
           blogUrl: "https://blog.naver.com/canhaveitall/223551986030",
           blogTitle: "빌바오 Arrese Pastelería 맛집 후기"
@@ -2325,7 +2325,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "크루아상",
           desc: "carolina·전통 디저트.",
-          image: "https://blogthumb.pstatic.net/MjAyNTA0MTNfNDQg/MDAxNzQ0NTI4MzE0Nzcx.XnRKE3YtKPXyALZmg77_A26HQtx7GLKiEY4rZvZ0CcMg.AsVpHmJwf9O1iz8XTssfAFmP2dYgXv4WpnoGdqWtXUQg.JPEG/IMG_7983.jpeg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Bread_in_basket.jpg/960px-Bread_in_basket.jpg",
           coords: [43.2605, -2.9255],
           blogUrl: "https://blog.naver.com/solinggg/223840416213",
           blogTitle: "빌바오 Pastelería Don Manuel 맛집 후기"
@@ -2335,7 +2335,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "사워도우",
           desc: "수제 빵.",
-          image: "https://blogthumb.pstatic.net/MjAyNDEyMjZfNjEg/MDAxNzM1MTU2NTQ1MDYy.KFz9TECo4NhiYb3i4wjRn9u13qOA_Rw6thdwFp4UYoUg.XB0oIM4fCXFrp3m-b60xXt5SpKe5Nu7KDJpwfBukiqUg.JPEG/BC8F3E06-6DB4-4222-A792-632C666C95B3.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Tortilla_de_patatas.jpg/960px-Tortilla_de_patatas.jpg",
           coords: [43.2585, -2.9275],
           blogUrl: "https://blog.naver.com/mxnzero/223713639374",
           blogTitle: "빌바오 Panadería Bilbao 맛집 후기"
@@ -2518,7 +2518,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "필터 커피",
           desc: "톨레도 올드타운 카페.",
-          image: "https://blogthumb.pstatic.net/MjAyNjAyMDVfOTIg/MDAxNzcwMjU0NTc3NDUx.4e7i6-8tspJewYV-neZXZ0o77MwtoirsLhVPxET55C4g.oKg9hgf4rI25b9GeSvPtHqUc586-8cTq6P7inULHfdEg.JPEG/900%A3%DF20260205102041.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Caf%C3%A9_con_leche.jpg/960px-Caf%C3%A9_con_leche.jpg",
           coords: [39.8575, -4.0225],
           blogUrl: "https://blog.naver.com/sohocinema/224172393584",
           blogTitle: "톨레도 Café de las Monjas 맛집 후기"
@@ -2528,7 +2528,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "브런치 세트",
           desc: "중세 거리 테라스.",
-          image: "https://blogthumb.pstatic.net/MjAyNTA3MjJfMjkg/MDAxNzUzMTUzNjAzNjA2.H_FvFP49YB1KlI-jsp_oLrcXCtVn-oN8NE7qsM351fwg.7S7IcsZR79K_wug2F5P3BHSnojczpq6x0fDAPxQ6x5Qg.JPEG/1753153603932.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Latte_art_3.jpg/960px-Latte_art_3.jpg",
           coords: [39.8588, -4.0215],
           blogUrl: "https://blog.naver.com/piruna2/223942691238",
           blogTitle: "톨레도 Café de Cervantes 맛집 후기"
@@ -2538,7 +2538,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "카페 con leche",
           desc: "알카사르 전망 카페.",
-          image: "https://blogthumb.pstatic.net/MjAxNzA4MTNfMjYz/MDAxNTAyNjA2MzQ2MDk0.X9Fo7FfkKq4P9GcNn2i_Aa_D8uaOi0jnj0CP1J7PUmsg.kcZnDxYbI1Sg5Xwyx781Vj2VNPFNQcqK3YwzmE-7Jsgg.JPEG.asa9731/IMG_5513.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Flat_white_coffee_with_pretty_feather_pattern.jpg/960px-Flat_white_coffee_with_pretty_feather_pattern.jpg",
           coords: [39.8595, -4.0205],
           blogUrl: "https://blog.naver.com/asa9731/221074578945",
           blogTitle: "톨레도 Café de Oriente 맛집 후기"
@@ -2550,7 +2550,7 @@ window.CITIES = [
           rating: 4.7,
           menu: "마사포",
           desc: "1856년 마사포án·yema.",
-          image: "https://blogthumb.pstatic.net/MjAyNjA2MjZfMTA5/MDAxNzgyNDgyODk5Mjg1.1pGAZUObZ24nmAWnEI73BYSBO6yJ-0KOQn0wErKHINAg.pJW-ZyOrPN2AJQhcg9eA3QSxyVHXk0zPjsBwNDYfbYgg.JPEG/IMG_6520.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Croissant-Petr_Kratochvil.jpg/960px-Croissant-Petr_Kratochvil.jpg",
           coords: [39.8568, -4.0235],
           blogUrl: "https://blog.naver.com/rinayeyo/224328531426",
           blogTitle: "톨레도 Confitería Santo Tomé 맛집 후기"
@@ -2560,7 +2560,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "전통 과자",
           desc: "톨레도 전통 과자.",
-          image: "https://blogthumb.pstatic.net/20160330_107/kakkiiy_1459305768550Qvusa_JPEG/new%BD%E6%B3%D7%C0%CF.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Bread_in_basket.jpg/960px-Bread_in_basket.jpg",
           coords: [39.8572, -4.0242],
           blogUrl: "https://blog.naver.com/kakkiiy/220668057470",
           blogTitle: "톨레도 Pastelería La Perla 맛집 후기"
@@ -2570,7 +2570,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "크루아상",
           desc: "현지 빵집.",
-          image: "https://blogthumb.pstatic.net/MjAyMjExMDRfNzAg/MDAxNjY3NTY4NTg5Nzg1._VgiknGo12TlJvghlhinHky13NbotVlDj1UAqt86eFAg.YcMnUos-vHpCuqUlq7nZDw6qKX-F6UCDe7PDd4K2G3Eg.JPEG.hyunofta/IMG_1584.JPG?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Tortilla_de_patatas.jpg/960px-Tortilla_de_patatas.jpg",
           coords: [39.8582, -4.0255],
           blogUrl: "https://blog.naver.com/hyunofta/222925911394",
           blogTitle: "톨레도 Panadería San Clemente 맛집 후기"
@@ -2773,7 +2773,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "브런치 세트",
           desc: "1908년 산세바스티án 카페.",
-          image: "https://blogthumb.pstatic.net/MjAyNjA0MzBfMjI3/MDAxNzc3NTEyNTg3MDQw.UdqCiupjIOw58dZXkMyDxf660GhnmFA8t2zbFyxe2Egg.UBu5wX_7mxVPNv2R5wmwsBG48WQbVv9B5ecECI1oKwgg.JPEG/IMG%A3%DF6294.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Caf%C3%A9_con_leche.jpg/960px-Caf%C3%A9_con_leche.jpg",
           coords: [43.3185, -1.9815],
           blogUrl: "https://blog.naver.com/cashewalmondbutter/224270143674",
           blogTitle: "산세바스티안 Café Oquendo 맛집 후기"
@@ -2783,7 +2783,7 @@ window.CITIES = [
           rating: 4.6,
           menu: "필터 커피",
           desc: "해변 전망 카페.",
-          image: "https://blogthumb.pstatic.net/MjAyNTA0MjRfMTQ3/MDAxNzQ1NDYxMDgyNjUw.KuhfACy8WzJ9HQHckJ-cbZo-FQ8cLnBIP50T36WbheYg.b__O1TsxGhiL26PiF-gclYdmTdWDPP9aFacYEIMxNHMg.PNG/%C1%A6%B8%F1%C0%BB-%C0%D4%B7%C2%C7%D8%C1%D6%BC%BC%BF%E4_-001_%2823%29.png?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Latte_art_3.jpg/960px-Latte_art_3.jpg",
           coords: [43.3155, -1.9985],
           blogUrl: "https://blog.naver.com/earthsun99/223844743519",
           blogTitle: "산세바스티안 Café de la Concha 맛집 후기"
@@ -2793,7 +2793,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "카페 라떼",
           desc: "구시가지 클래식.",
-          image: "https://blogthumb.pstatic.net/MjAyMTEwMTRfMjkw/MDAxNjM0MjE4NDMyNDI0.HvCQNSd3j7W2KRurjdUM-uoClA0eeFH8ixyyloQdGQMg.3eG6jq38_i1TVDLD3qivnuAOnqlGSO3uHqbdGVWVLCIg.JPEG.enjoy_life00/KakaoTalk_20211014_145303587_08.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Flat_white_coffee_with_pretty_feather_pattern.jpg/960px-Flat_white_coffee_with_pretty_feather_pattern.jpg",
           coords: [43.3195, -1.9845],
           blogUrl: "https://blog.naver.com/onvalog/223870750763",
           blogTitle: "산세바스티안 Café Iruña Donostia 맛집 후기"
@@ -2805,7 +2805,7 @@ window.CITIES = [
           rating: 4.6,
           menu: "사워도우",
           desc: "바스크 전통 과자.",
-          image: "https://blogthumb.pstatic.net/MjAyMjA4MzBfMTEx/MDAxNjYxODI5NjA4OTk5.z_-uGott-PdM62vFnCt87Oxu2zy9v5MnrXhjy1Qd-1Yg.H-p79oqTUdpSn4PkaVj9DEGOhmzzbYtahHQDrmUuO8og.JPEG.hyunofta/IMG_3401.JPG?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Croissant-Petr_Kratochvil.jpg/960px-Croissant-Petr_Kratochvil.jpg",
           coords: [43.3175, -1.9825],
           blogUrl: "https://blog.naver.com/hyunofta/222862909405",
           blogTitle: "산세바스티안 Otaegui Pastelería 맛집 후기"
@@ -2815,7 +2815,7 @@ window.CITIES = [
           rating: 4.7,
           menu: "크루아상",
           desc: "artisan sourdough.",
-          image: "https://blogthumb.pstatic.net/MjAyNDA4MjlfMjU1/MDAxNzI0OTQxNjY4MTI1.bDx5eLsFyv5RCiedmXxEDJ7vOVEw_-b7HI9KxS7sFWMg.VGS7Cl_GLk8TEDN-A5QcIYHancbnrcMnMvmRZcH5YHAg.JPEG/output_363991796.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Bread_in_basket.jpg/960px-Bread_in_basket.jpg",
           coords: [43.3205, -1.9835],
           blogUrl: "https://blog.naver.com/snakewhalestory/223566043295",
           blogTitle: "산세바스티안 Panadería Okela 맛집 후기"
@@ -2825,7 +2825,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "사워도우",
           desc: "txantxigorri·디저트.",
-          image: "https://blogthumb.pstatic.net/20150510_177/jgjhhk_1431268403553YtlWw_JPEG/DSC04892.JPG?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Tortilla_de_patatas.jpg/960px-Tortilla_de_patatas.jpg",
           coords: [43.3165, -1.9855],
           blogUrl: "https://blog.naver.com/yundolism/220355668487",
           blogTitle: "산세바스티안 Pastelería Oiartzun 맛집 후기"
@@ -3002,7 +3002,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "브런치 세트",
           desc: "1880년대 알리칸테 카페.",
-          image: "https://blogthumb.pstatic.net/MjAyMzAzMTBfMTkg/MDAxNjc4NDQwODQ5NDY5.y0cMLXDYltr9RJij3acPcGDXsg3H8OVZc9JDr1x_8YMg.UU3Fscq8fUqw1EyfU_y8Ykqsewkfjtoz1ASHThBfLWwg.JPEG.jrkimceo/Tomato_bread_catalan_-_stonesoup.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Caf%C3%A9_con_leche.jpg/960px-Caf%C3%A9_con_leche.jpg",
           coords: [38.3455, -0.4845],
           blogUrl: "https://blog.naver.com/jrkimceo/223049231035",
           blogTitle: "알리칸테 Café Madrid 맛집 후기"
@@ -3012,7 +3012,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "카페 라떼",
           desc: "해변 테라스 카페.",
-          image: "https://blogthumb.pstatic.net/MjAyNDA3MTFfNTEg/MDAxNzIwNzAwMDg3MDIw.JQVluLiS0tMR2J7nU1F3qVWnbpyRLAa6mUBQ3i1loScg.ljx8V3GeYTHydppXFxsqM5NvmiyNuXk5ojCqJxhKK7og.JPEG/IMG_5265.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Latte_art_3.jpg/960px-Latte_art_3.jpg",
           coords: [38.3465, -0.4835],
           blogUrl: "https://blog.naver.com/jeehyun722/223509578481",
           blogTitle: "알리칸테 Café de Levante 맛집 후기"
@@ -3022,7 +3022,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "플랫 화이트",
           desc: "엑스planada 클래식.",
-          image: "https://blogthumb.pstatic.net/20131119_33/grenni_1384855883732WkeL6_JPEG/13.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Flat_white_coffee_with_pretty_feather_pattern.jpg/960px-Flat_white_coffee_with_pretty_feather_pattern.jpg",
           coords: [38.3445, -0.4855],
           blogUrl: "https://blog.naver.com/grenni/130180138381",
           blogTitle: "알리칸테 Café Lisboa 맛집 후기"
@@ -3034,7 +3034,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "전통 과자",
           desc: "알리칸테 과자.",
-          image: "https://blogthumb.pstatic.net/MjAyMjEwMThfMTUx/MDAxNjY2MDg2NjgxMDA0.E2h7Jn09ab0cx9o6pLXitEcmnkAf1suEgMbv2ef6Je4g.9JubrngASfU0IyAXgpjlL18rlC1VlKRP_xjINvN57Csg.JPEG.2301mimi/IMG_4014.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Croissant-Petr_Kratochvil.jpg/960px-Croissant-Petr_Kratochvil.jpg",
           coords: [38.3458, -0.4842],
           blogUrl: "https://blog.naver.com/2301mimi/222904033483",
           blogTitle: "알리칸테 Pastelería Calle Mayor 맛집 후기"
@@ -3044,7 +3044,7 @@ window.CITIES = [
           rating: 4.6,
           menu: "전통 과자",
           desc: "전통 빵·coca.",
-          image: "https://blogthumb.pstatic.net/MjAyNjA0MTNfMTUw/MDAxNzc2MDc1MTQ1NzE5.b_S8yKANN3Av1y1r8PwVXDEBgeAyvqEZIAzFmhCIK2Ag.ww65O5fXwWTILc-idAcUi3FyiS1a9ANO_3tZK4_ul18g.JPEG/IMG%A3%DF6518.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Bread_in_basket.jpg/960px-Bread_in_basket.jpg",
           coords: [38.3475, -0.4825],
           blogUrl: "https://blog.naver.com/hyeon3062/224251050329",
           blogTitle: "알리칸테 Panadería La Llobera 맛집 후기"
@@ -3054,7 +3054,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "파티스리",
           desc: "turron·지역 디저트.",
-          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/S%C3%A1ndwich_Barros_Luco_-_Fuente_Mardoqueo_-_01.jpg/960px-S%C3%A1ndwich_Barros_Luco_-_Fuente_Mardoqueo_-_01.jpg",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Tortilla_de_patatas.jpg/960px-Tortilla_de_patatas.jpg",
           coords: [38.3435, -0.4865],
           blogUrl: "https://blog.naver.com/2301mimi/222904033483",
           blogTitle: "알리칸테 Confitería Castillo 맛집 후기"
@@ -3251,7 +3251,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "카페 con leche",
           desc: "대성당 근처 카페.",
-          image: "https://blogthumb.pstatic.net/MjAyMjA2MTNfMjkz/MDAxNjU1MDcwOTAyMDU5.jZBZhFqo406JuSWUqbwVRM8tJJ6lT3XAvbd06TY0WHcg._ms67mVt66jTuIqT2-O2FzjEsYqX090QaEyC2XmgSrgg.JPEG.has17/IMG_6633.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Caf%C3%A9_con_leche.jpg/960px-Caf%C3%A9_con_leche.jpg",
           coords: [39.5695, 2.6485],
           blogUrl: "https://blog.naver.com/has17/222778022754",
           blogTitle: "팔마 Cappuccino Palau 맛집 후기"
@@ -3261,7 +3261,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "플랫 화이트",
           desc: "1915년 팔마 카페.",
-          image: "https://upload.wikimedia.org/wikipedia/commons/a/ab/Grossiphoto_b_%28cropped%29.jpg",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Latte_art_3.jpg/960px-Latte_art_3.jpg",
           coords: [39.5705, 2.6515],
           blogUrl: "https://blog.naver.com/duddjtodanf/223241279971",
           blogTitle: "팔마 Café Rialto 맛집 후기"
@@ -3271,7 +3271,7 @@ window.CITIES = [
           rating: 4.6,
           menu: "엔사이마다",
           desc: "1700년대 ensaimada.",
-          image: "https://blogthumb.pstatic.net/MjAyMzA3MzFfMTcg/MDAxNjkwNzYzNzgzMjIz.Xu7TqGbd3UD9MCIOWnChMnvh7C5_ynxwt6lV7laMrucg.yHPG_j4CkdegfLNO2pJ2TMhx1wCxjsa-DDsSPgnkYt8g.JPEG.ara_1223/%C1%A6%B8%F1%C0%BB_%C0%D4%B7%C2%C7%D8%C1%D6%BC%BC%BF%E4_-001.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Flat_white_coffee_with_pretty_feather_pattern.jpg/960px-Flat_white_coffee_with_pretty_feather_pattern.jpg",
           coords: [39.5715, 2.6525],
           blogUrl: "https://blog.naver.com/ara_1223/223173330649",
           blogTitle: "팔마 Café Ca'n Joan de s'Aigo 맛집 후기"
@@ -3283,7 +3283,7 @@ window.CITIES = [
           rating: 4.6,
           menu: "엔사이마다",
           desc: "ensaimada·마요르카 빵.",
-          image: "https://blogthumb.pstatic.net/MjAyMjA1MjJfMzIg/MDAxNjUzMTg4MTY5ODc4.6pO7u-5-AY45s-gvluPP2JEBoVCsQK2Jzo0ZqVh4dccg.ZlMyVsOlrYNnms69LHx_aIH4w0zUfryoF2msy1aMLw0g.JPEG.yjnam96/64E09A8B-C4A1-43B8-B101-BCACF23FE1C3.jpeg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Croissant-Petr_Kratochvil.jpg/960px-Croissant-Petr_Kratochvil.jpg",
           coords: [39.5725, 2.6535],
           blogUrl: "https://blog.naver.com/yjnam96/222741618600",
           blogTitle: "팔마 Forn Fondo Palma 맛집 후기"
@@ -3293,7 +3293,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "파티스리",
           desc: "섬 전통 과자.",
-          image: "https://blogthumb.pstatic.net/MjAyNDA5MDFfMjA1/MDAxNzI1MTM0MjAzODQw.5rrXOgsQE_AVcdLszZdAO60UpSIGTgToGLmvufOZhgYg.jTN0F5nOKOeZH82eKWB_Fj7K0GSWFmCMgx6I_Gmlm10g.JPEG/20240831%A3%DF134801.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Bread_in_basket.jpg/960px-Bread_in_basket.jpg",
           coords: [39.5685, 2.6495],
           blogUrl: "https://blog.naver.com/pjh8893/223567934280",
           blogTitle: "팔마 Pastelería Can Miquel 맛집 후기"
@@ -3303,7 +3303,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "전통 과자",
           desc: "수제 빵·페이스트리.",
-          image: "https://blogthumb.pstatic.net/MjAxNzA4MTVfMTQx/MDAxNTAyODA4ODg2MTE0.3VatshSQuE56wI03fWCWGIlAtYolMxB02bBmGfqbbqkg.iuk46WFNvHXbjIUixkfCOVVq7HRsK0kbBOtDjgMLUM4g.JPEG.ljwk2002/20170807_212938.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Tortilla_de_patatas.jpg/960px-Tortilla_de_patatas.jpg",
           coords: [39.5712, 2.6508],
           blogUrl: "https://blog.naver.com/ljwk2002/221074703056",
           blogTitle: "팔마 Horno de Santa Catalina 맛집 후기"
@@ -3500,7 +3500,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "필터 커피",
           desc: "1920년대 사라고sa 카페.",
-          image: "https://blogthumb.pstatic.net/MjAxOTEwMDdfMTQ2/MDAxNTcwNDE1MTg1MjM3.CsUQt5GpuI9duf2k60RECOcCF64wPwVx0aK3q1bEPxIg.WJe0YLywx60pLElLyjiTkoDNS0z_LD8uNU-H7qSOrU8g.JPEG.carminet14/%BB%E7%B6%F3%B0%ED%BB%E7%BA%D2%B6%F3%C5%B8%C6%C4%BD%BA.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Caf%C3%A9_con_leche.jpg/960px-Caf%C3%A9_con_leche.jpg",
           coords: [41.6525, -0.8865],
           blogUrl: "https://blog.naver.com/carminet14/221670511401",
           blogTitle: "사라고사 Café Praga 맛집 후기"
@@ -3510,7 +3510,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "카페 라떼",
           desc: "플라사 del pilar 근처.",
-          image: "https://blogthumb.pstatic.net/MjAyNjAyMTlfMjE3/MDAxNzcxNDQ3OTQ3NDQ0.43i4u2MaWsYd3iseiwADwY41fWwcF4uS4PT01DaFsCEg.ZYHu_jbjod1r4R-w9WLnVSScBpOMEyi5TSB0FZXNl94g.JPEG/output%A3%DF1914661991.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Latte_art_3.jpg/960px-Latte_art_3.jpg",
           coords: [41.6565, -0.8785],
           blogUrl: "https://blog.naver.com/murphy410/224187674707",
           blogTitle: "사라고사 Café Levante 맛집 후기"
@@ -3520,7 +3520,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "카페 con leche",
           desc: "현지인 카페.",
-          image: "https://blogthumb.pstatic.net/20150721_189/tato86_1437430248361PqsGG_JPEG/20150527_223231.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Flat_white_coffee_with_pretty_feather_pattern.jpg/960px-Flat_white_coffee_with_pretty_feather_pattern.jpg",
           coords: [41.6485, -0.8885],
           blogUrl: "https://blog.naver.com/tato86/220426347456",
           blogTitle: "사라고사 Café de Oriente 맛집 후기"
@@ -3532,7 +3532,7 @@ window.CITIES = [
           rating: 4.6,
           menu: "크루아상",
           desc: "1915년 전통 과자.",
-          image: "https://blogthumb.pstatic.net/MjAxODA4MDJfMTEx/MDAxNTMzMTY3NDE2NjUy.ECv0fgwwsgtMvaYkhvFzys6NQuPPyq95J3ATKhwW9_gg.SU3QEIByTQ9w1gDa4_nxTThmR7LRvc6W87MaJzmSHnAg.JPEG.spring5867/IMG_5027.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Croissant-Petr_Kratochvil.jpg/960px-Croissant-Petr_Kratochvil.jpg",
           coords: [41.6515, -0.8875],
           blogUrl: "https://blog.naver.com/spring5867/221331416716",
           blogTitle: "사라고사 Pastelería La Tranquilidad 맛집 후기"
@@ -3542,7 +3542,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "사워도우",
           desc: "아ra곤 빵.",
-          image: "https://blogthumb.pstatic.net/MjAyMTEyMDRfMjE4/MDAxNjM4NTk4MTE3NTEx.EjX49UdZgAfwxGAqg_7Xsf9nkOuEH4PYTbp9VCdRFO4g.QlYINFZrsNemmAOMV_r3ozC_bkr6Nf2sYORvFjRM_sog.JPEG.sayravel/20211115%A3%DF152743.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Bread_in_basket.jpg/960px-Bread_in_basket.jpg",
           coords: [41.6505, -0.8895],
           blogUrl: "https://blog.naver.com/sayravel/222587078642",
           blogTitle: "사라고사 Panadería La Favorita 맛집 후기"
@@ -3552,7 +3552,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "사워도우",
           desc: "frutas de Aragón.",
-          image: "https://postfiles.pstatic.net/MjAyMTEyMDRfMjYy/MDAxNjM4NTk4MTE2Nzgw.Sv6urA61VJIdCTijjVo45jJJhoN4n1qz8k7lQFoEh9sg.x1kXcxlvmZAz0zWPmSsfBVtWiNOPG53SAglUSeBrRJYg.JPEG.sayravel/20211115%EF%BC%BF162633.jpg?type=w80_blur",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Tortilla_de_patatas.jpg/960px-Tortilla_de_patatas.jpg",
           coords: [41.6495, -0.8865],
           blogUrl: "https://blog.naver.com/sayravel/222587078642",
           blogTitle: "사라고사 Confitería La Suiza 맛집 후기"
@@ -3729,7 +3729,7 @@ window.CITIES = [
           rating: 4.6,
           menu: "브런치 세트",
           desc: "1905년 플라sa Mayor 카페.",
-          image: "https://blogthumb.pstatic.net/MjAyMjAzMDJfMjgx/MDAxNjQ2MjE2MjYwMjQ1.AfRBaLVJIdCTrDLdW5I0vBoLWLvuSMJpM4v7MsVmn-Ig.LqeHqU4nx8vj77NOJbOSkdjlzkV9fcjPc4AnJW2i8-4g.JPEG.shekinah_dk/IMG_4571.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Caf%C3%A9_con_leche.jpg/960px-Caf%C3%A9_con_leche.jpg",
           coords: [40.9655, -5.6645],
           blogUrl: "https://blog.naver.com/shekinah_dk/222670312742",
           blogTitle: "살라망카 Café Novelty 맛집 후기"
@@ -3739,7 +3739,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "플랫 화이트",
           desc: "대학가 문학 카페.",
-          image: "https://postfiles.pstatic.net/MjAxOTAyMTBfMTg5/MDAxNTQ5NzkzMzY2NzQ4.MRaWCTHr3TXudF6QLj1FP3mfea_RzJ6WyhXCPFRFbdIg.9pZyhVasO6gZReQw6dY637aI7J2Udh6EPERLzTKO2IUg.JPEG.sopi1997/KakaoTalk_20190210_190438586.jpg?type=w80_blur",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Latte_art_3.jpg/960px-Latte_art_3.jpg",
           coords: [40.9635, -5.6665],
           blogUrl: "https://blog.naver.com/ssblog02/221462481376",
           blogTitle: "살라망카 Café Literario 맛집 후기"
@@ -3749,7 +3749,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "플랫 화이트",
           desc: "살라망ca 전통.",
-          image: "https://blogthumb.pstatic.net/MjAxOTAyMTFfMjE3/MDAxNTQ5ODQ3MjQ2MjY3.Cfttv8tMR4GKWRMIBfQKLaGP6LKMBnFwDMil-d-kKfQg.qWJPDiD6YVgvQ-e8RPxc87Bjciszp14JuyXYHeA3Hawg.JPEG.wlehd7020/IMG_3595.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Flat_white_coffee_with_pretty_feather_pattern.jpg/960px-Flat_white_coffee_with_pretty_feather_pattern.jpg",
           coords: [40.9645, -5.6655],
           blogUrl: "https://blog.naver.com/wlehd7020/221462812858",
           blogTitle: "살라망카 Café Corrillo 맛집 후기"
@@ -3761,7 +3761,7 @@ window.CITIES = [
           rating: 4.6,
           menu: "전통 과자",
           desc: "hornazo·전통 과자.",
-          image: "https://blogthumb.pstatic.net/20120525_171/valeria77_1337939439104JY7c0_JPEG/P1020362.JPG?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Croissant-Petr_Kratochvil.jpg/960px-Croissant-Petr_Kratochvil.jpg",
           coords: [40.9652, -5.6642],
           blogUrl: "https://blog.naver.com/valeria77/150139327960",
           blogTitle: "살라망카 Pastelería Castrillo 맛집 후기"
@@ -3771,7 +3771,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "크루아상",
           desc: "카스티야 빵.",
-          image: "https://upload.wikimedia.org/wikipedia/commons/0/00/Coat_of_Arms_of_the_Medrano_Family.png",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Bread_in_basket.jpg/960px-Bread_in_basket.jpg",
           coords: [40.9638, -5.6668],
           blogUrl: "https://blog.naver.com/ssblog02/221462481376",
           blogTitle: "살라망카 Panadería San Esteban 맛집 후기"
@@ -3781,7 +3781,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "수제 빵",
           desc: "1900년대 과자점.",
-          image: "https://postfiles.pstatic.net/MjAxOTAyMTBfMzAg/MDAxNTQ5NzkyMjYwMzEx.-jwNnhrxyK8yPfX8lRb7rycqOV83DJe9piT2MCdIgIcg.E5uSsGFCIPHIakKdc6wb6aKmxLSCrWjNFHblL3EzLcUg.JPEG.sopi1997/KakaoTalk_20190210_185008101.jpg",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Tortilla_de_patatas.jpg/960px-Tortilla_de_patatas.jpg",
           coords: [40.9648, -5.6652],
           blogUrl: "https://blog.naver.com/ssblog02/221462481376",
           blogTitle: "살라망카 Confitería La Sin Rival 맛집 후기"
@@ -3958,7 +3958,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "필터 커피",
           desc: "수도교 근처 카페.",
-          image: "https://upload.wikimedia.org/wikipedia/commons/c/c8/El_Meson_Sandwiches_logo.png",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Caf%C3%A9_con_leche.jpg/960px-Caf%C3%A9_con_leche.jpg",
           coords: [40.9485, -4.1185],
           blogUrl: "https://blog.naver.com/satty07/221055706194",
           blogTitle: "세고비아 Café Rico 맛집 후기"
@@ -3968,7 +3968,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "카페 con leche",
           desc: "세고비아 올드타운.",
-          image: "https://blogthumb.pstatic.net/MjAyMzA5MDdfMjY5/MDAxNjk0MDcyMTA2NjAy.UW9RQqUvw5osfLzCvmdVpO6THHxiWkEdVadEBI1I-8Ug.vjeZ_ommG1RdGc5TKT4ktCEsejl6JHbqV757GtSRH6Yg.JPEG.khkim971205/IMG_0439.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Latte_art_3.jpg/960px-Latte_art_3.jpg",
           coords: [40.9475, -4.1175],
           blogUrl: "https://blog.naver.com/khkim971205/223205104076",
           blogTitle: "세고비아 Café de Muñoz 맛집 후기"
@@ -3978,7 +3978,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "카페 라떼",
           desc: "전통 테라스.",
-          image: "https://blogthumb.pstatic.net/MjAyNjAyMTZfMTI3/MDAxNzcxMjE4MTc1NTYx.SX1meRX0Te1Hp0ir76uR5d9qZ_oGk7RH3yO_2fJbBRMg.XfC9k5J506ayzMGm5tkfbw31JGKHs_ClJE8lTIs1dZwg.JPEG/%B7%B1%B4%F8%BA%A3%C0%CC%C4%BF%B8%AE.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Flat_white_coffee_with_pretty_feather_pattern.jpg/960px-Flat_white_coffee_with_pretty_feather_pattern.jpg",
           coords: [40.9495, -4.1195],
           blogUrl: "https://blog.naver.com/yejiseb/224185456613",
           blogTitle: "세고비아 Café de Segovia 맛집 후기"
@@ -3990,7 +3990,7 @@ window.CITIES = [
           rating: 4.6,
           menu: "파티스리",
           desc: "ponche segoviano.",
-          image: "https://blogthumb.pstatic.net/MjAyNjAzMTNfNzEg/MDAxNzczMzgzMDk5NjM5.EoHO9vMeCkr4KeR9vV3Ai1ir6iGtn63k4AWC2C5fZ8Mg.tyJ6RhdoYGgj3JVQa-91hPLG5sHW3kANjpuuoBj1tVog.JPEG/unnamed.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Croissant-Petr_Kratochvil.jpg/960px-Croissant-Petr_Kratochvil.jpg",
           coords: [40.9482, -4.1182],
           blogUrl: "https://blog.naver.com/hc_orefood/224215217201",
           blogTitle: "세고비아 Pastelería Limón y Menta 맛집 후기"
@@ -4000,7 +4000,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "수제 빵",
           desc: "전통 빵.",
-          image: "https://blogthumb.pstatic.net/MjAyNTEyMjVfMjQz/MDAxNzY2NjY0MDM1Mzgx.zebeZf4VHH7ho7mf4G7-91Cg9FtoLwLX_5uTax45V9Eg.c2HJfivUoefqxo2tLzdAzdFwio_fwfYvOQ6XQJO3bKwg.PNG/image.png?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Bread_in_basket.jpg/960px-Bread_in_basket.jpg",
           coords: [40.9478, -4.1165],
           blogUrl: "https://blog.naver.com/polarbear_lee/224129567291",
           blogTitle: "세고비아 Panadería El Alcázar 맛집 후기"
@@ -4010,7 +4010,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "전통 과자",
           desc: "세고비아 과자.",
-          image: "https://postfiles.pstatic.net/MjAyMjA4MTVfMTM0/MDAxNjYwNTA4MzI3NTkz.LdukVCBl5j8WeYEjF__MyjHQa_yfIBlmoVlPbtT-Xbkg.D9sVPwSl4kOLT9ffpGxvXbSqhGvfsIl3nNpiYEdnVMog.JPEG.heeju0211/IMG_1059.JPG",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Tortilla_de_patatas.jpg/960px-Tortilla_de_patatas.jpg",
           coords: [40.9488, -4.1172],
           blogUrl: "https://blog.naver.com/joybijous2/222861904130",
           blogTitle: "세고비아 Confitería La Segoviana 맛집 후기"
@@ -4187,7 +4187,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "브런치 세트",
           desc: "누에보 다리 전망.",
-          image: "https://blogthumb.pstatic.net/MjAyNDAxMTBfMTYg/MDAxNzA0ODc4MTE0Mjkw.bDL-ksnn4ZNwEdWBGV6-ODHr3gdCu4lkobwY4Hp0dyEg.EP4kKzJI1HdWADPttqoBeLN4NAG5gDSy1RIcRU1QdOQg.JPEG.cindy7627/output_416408046.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Caf%C3%A9_con_leche.jpg/960px-Caf%C3%A9_con_leche.jpg",
           coords: [36.7425, -5.1662],
           blogUrl: "https://blog.naver.com/cindy7627/223318468947",
           blogTitle: "론다 Café Bar Maestro 맛집 후기"
@@ -4197,7 +4197,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "카페 라떼",
           desc: "협곡 뷰 카페.",
-          image: "https://blogthumb.pstatic.net/MjAyNTA1MDFfMjM5/MDAxNzQ2MDc2NzAxNTA0.6KEheaSbGwBIa3Guk7FsYqrdzp7IOk5S_mwDFipNlKsg.TMGEt69opSlJik1Bwn6rzIYs1eOz-Zs8hdqmI_bcW3og.JPEG/B4C80EDB-A821-47AA-BFF1-CD7F3673983F.jpeg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Latte_art_3.jpg/960px-Latte_art_3.jpg",
           coords: [36.7418, -5.1658],
           blogUrl: "https://blog.naver.com/snow_ke/223852209740",
           blogTitle: "론다 Café de Ronda 맛집 후기"
@@ -4207,7 +4207,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "카페 con leche",
           desc: "플라za 카페.",
-          image: "https://postfiles.pstatic.net/MjAyNTA1MDFfMTkx/MDAxNzQ2MDc2NzA0MTkx.UMOm5RPaEi8BOY0fPDRy_WU60YL2mp-rluHjahU08iMg.uJAsFAn8vQB2ubFeLFtXpQC0cA_HnFHo7FrqxpMVRlwg.PNG/image.png?type=w80_blur",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Flat_white_coffee_with_pretty_feather_pattern.jpg/960px-Flat_white_coffee_with_pretty_feather_pattern.jpg",
           coords: [36.7432, -5.1642],
           blogUrl: "https://blog.naver.com/snow_ke/223852209740",
           blogTitle: "론다 Café Alameda 맛집 후기"
@@ -4219,7 +4219,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "파티스리",
           desc: "론da yemas.",
-          image: "https://blogthumb.pstatic.net/20150616_249/crtmt_14344572960667A4fQ_JPEG/P1170794.JPG?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Croissant-Petr_Kratochvil.jpg/960px-Croissant-Petr_Kratochvil.jpg",
           coords: [36.7428, -5.1655],
           blogUrl: "https://blog.naver.com/crtmt/220392218107",
           blogTitle: "론다 Pastelería Yema 맛집 후기"
@@ -4229,7 +4229,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "전통 과자",
           desc: "안달루시아 빵.",
-          image: "https://blogthumb.pstatic.net/20140329_230/h_muse_1396080287292Ca5g7_JPEG/IMG_7592.JPG?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Bread_in_basket.jpg/960px-Bread_in_basket.jpg",
           coords: [36.7415, -5.1665],
           blogUrl: "https://blog.naver.com/h_muse/120210404000",
           blogTitle: "론다 Panadería San Francisco 맛집 후기"
@@ -4239,7 +4239,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "전통 과자",
           desc: "수제 과자.",
-          image: "https://blogthumb.pstatic.net/MjAxNzAyMDNfNDAg/MDAxNDg2MDcxMDMxMDgw.YzzMTL7neNBbk68iQ4Y54-rPda5tPKT6AIBZgMMwOjwg.InCK_Q9NmzIV60XnmWJZ0VkzHnBIPERnpRf88KJNFd8g.JPEG.dennis0525/2017-01-28-16-34-13.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Tortilla_de_patatas.jpg/960px-Tortilla_de_patatas.jpg",
           coords: [36.7435, -5.165],
           blogUrl: "https://blog.naver.com/dennis0525/220926015383",
           blogTitle: "론다 Confitería La Tagua 맛집 후기"
@@ -4416,7 +4416,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "플랫 화이트",
           desc: "1873년 산티아고 카페.",
-          image: "https://blogthumb.pstatic.net/MjAyNTAyMjdfNjMg/MDAxNzQwNTk0MTg1Mjky.mV2xpp7vv6YTdSmKsChGD6yEqTr0MP6-wumElNOtAtIg.I8L1O1DNir0b7NoixdYWUCXDE8t7SO3LCAkWcj0795Yg.JPEG/IMG_2195.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Caf%C3%A9_con_leche.jpg/960px-Caf%C3%A9_con_leche.jpg",
           coords: [42.8805, -8.5455],
           blogUrl: "https://blog.naver.com/p_jazmin/223775809117",
           blogTitle: "산티아고 Café Casino 맛집 후기"
@@ -4426,7 +4426,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "카페 con leche",
           desc: "대성당 근처.",
-          image: "https://blogthumb.pstatic.net/MjAyNjA0MTVfMjY3/MDAxNzc2MjM5NDQwNjY4.DQBvXsOD3FDWynjSyB4kUNWPUUXOoU_W17dp-wB-d8kg.dNPvidOTSaawE06P_GGG7UnBgIZNPqT346Hp21yuylMg.JPEG/IMG%A3%DF6305.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Latte_art_3.jpg/960px-Latte_art_3.jpg",
           coords: [42.8795, -8.5465],
           blogUrl: "https://blog.naver.com/reumblee/224253425399",
           blogTitle: "산티아고 Café de la Estrella 맛집 후기"
@@ -4436,7 +4436,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "카페 con leche",
           desc: "갈리시아 전통 카페.",
-          image: "https://blogthumb.pstatic.net/MjAyMjA4MzBfMzAg/MDAxNjYxODA0MzQyMTIy.D5Pf_g9-XGZ0schpWVONj-35Fy_HvH62uHRpUgHONj8g.ygplyZps5YtbC2ipjL1HI_0SKQfE4-7fWy11SeLAcnAg.JPEG.track222/20220821%A3%DF205455.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Flat_white_coffee_with_pretty_feather_pattern.jpg/960px-Flat_white_coffee_with_pretty_feather_pattern.jpg",
           coords: [42.8815, -8.5442],
           blogUrl: "https://blog.naver.com/londontoworld/222861762739",
           blogTitle: "산티아고 Café de Altamira 맛집 후기"
@@ -4448,7 +4448,7 @@ window.CITIES = [
           rating: 4.6,
           menu: "산티아고 타르트",
           desc: "tarta de Santiago.",
-          image: "https://blogthumb.pstatic.net/MjAyNTAxMTZfMjY1/MDAxNzM3MDE4NzAwODYw.138J4eXL7kDatX7KIqe6LhOuW8FPNfOof2cvUMhOWJMg.roSTJ6jdNPmejyS6cQI40C_uEWIcB2R3CL8Dyme8YqUg.JPEG/900%A3%DF20241202%A3%DF092211.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Croissant-Petr_Kratochvil.jpg/960px-Croissant-Petr_Kratochvil.jpg",
           coords: [42.8808, -8.5458],
           blogUrl: "https://blog.naver.com/coreallega/223727984568",
           blogTitle: "산티아고 Pastelería Mercedes Mora 맛집 후기"
@@ -4458,7 +4458,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "수제 빵",
           desc: "갈리시아 빵.",
-          image: "https://blogthumb.pstatic.net/MjAyMTA5MDlfMjAy/MDAxNjMxMTU1MTM3MTc3.HvsDafUUzNgjLwnI0IhSYF5iM9QTABfb4PZ-AecQ8SYg.fW-G5CuAoRHhTAljBP6hePVF6iRxPp6V86AzezguY08g.JPEG.sunnyasz94/IMG_5938.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Bread_in_basket.jpg/960px-Bread_in_basket.jpg",
           coords: [42.8795, -8.5468],
           blogUrl: "https://blog.naver.com/sunnyasz94/222500286977",
           blogTitle: "산티아고 Panadería O Forno 맛집 후기"
@@ -4468,7 +4468,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "엠파나다",
           desc: "empanada·과자.",
-          image: "https://blogthumb.pstatic.net/MjAyMjA0MDlfMjE3/MDAxNjQ5NDQ3NTU0MjQ3.hLYatPoM2Pd8IbbIlGujuNW99oxrL_JBcgOocDnGrFog.CK97xFQWmGjAVUGn12lCVqbgdfUZcsVG3WdYHEpzS7wg.JPEG.sunnyasz94/KakaoTalk_20220408_153447286_02.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Tortilla_de_patatas.jpg/960px-Tortilla_de_patatas.jpg",
           coords: [42.8778, -8.5448],
           blogUrl: "https://blog.naver.com/sunnyasz94/222695775415",
           blogTitle: "산티아고 Confitería La Coruña 맛집 후기"
@@ -4665,7 +4665,7 @@ window.CITIES = [
           rating: 4.6,
           menu: "스페셜티 커피",
           desc: "지ro나 스페셜티 커피.",
-          image: "https://blogthumb.pstatic.net/MjAyNDA3MTZfMTQ2/MDAxNzIxMDkxNDQyMjM5.GNi6Ocx6SZ1hP5kdYLDaMwStJoaQNKylwqzRehXeLVEg.s9A_--NzdBlsYamKLw6b2-8JNbarcEIIkhLPjH0br5Ig.JPEG/IMG_4015.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Caf%C3%A9_con_leche.jpg/960px-Caf%C3%A9_con_leche.jpg",
           coords: [41.9835, 2.8235],
           blogUrl: "https://blog.naver.com/kyayjy/223514900128",
           blogTitle: "지로나 Espresso Mafia 맛집 후기"
@@ -4675,7 +4675,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "브런치",
           desc: "현대 카페·브런치.",
-          image: "https://blogthumb.pstatic.net/MjAyNDA0MTRfODMg/MDAxNzEzMDkzMDE5NDEx.AIGoJ5Cdr8QeeyNKPpIUTdzhVitlqkZsKrXBzp1aqpUg.1I0FU7n_BhV6QKK3gt_Jq09irh21qYwOwwGhYS-6inQg.JPEG/P1040525.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Latte_art_3.jpg/960px-Latte_art_3.jpg",
           coords: [41.9842, 2.8238],
           blogUrl: "https://blog.naver.com/quiipen/223415321773",
           blogTitle: "지로나 Café Context 맛집 후기"
@@ -4685,7 +4685,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "필터 커피",
           desc: "온yar 강가 카페.",
-          image: "https://blogthumb.pstatic.net/MjAyNjA2MDNfNjIg/MDAxNzgwNDg0MTEwMDgz.nFXehxuQqv_s2do1naYzokDTjDQGrFPmL5glTSPCyNMg.ebsoY0A6Pu7TCAvugBknrz-YTdnG8hrEfKs8YJAqklcg.JPEG/KakaoTalk_20260530_194333493_26.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Flat_white_coffee_with_pretty_feather_pattern.jpg/960px-Flat_white_coffee_with_pretty_feather_pattern.jpg",
           coords: [41.9838, 2.8245],
           blogUrl: "https://blog.naver.com/february_favorite/224304991049",
           blogTitle: "지로나 Café de la Plaça 맛집 후기"
@@ -4697,7 +4697,7 @@ window.CITIES = [
           rating: 4.7,
           menu: "아이스크림",
           desc: "Jordi Roca 아이스크림·디저트.",
-          image: "https://postfiles.pstatic.net/MjAyNDEwMTlfNyAg/MDAxNzI5Mjk3ODMzNDQw.PjJjv_4BnJxZkOEZJcQvKBUHysAW87ymns-jeMqjpigg.0yP3m7NcTvYeop7c2UeRcmkWjyAVznhnStHx3Z_4Go8g.JPEG/%EC%8A%A4%ED%8E%98%EC%9D%B8_%EC%A7%80%EB%A1%9C%EB%82%98_%EB%A7%9B%EC%A7%91_%ED%86%A0%EC%8A%A4%ED%8A%B8_Rocambolesc_Bikineria_Gelateria-0.jpg",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Croissant-Petr_Kratochvil.jpg/960px-Croissant-Petr_Kratochvil.jpg",
           coords: [41.9838, 2.8238],
           blogUrl: "https://blog.naver.com/heewon1032/223624908676",
           blogTitle: "지로나 Rocambolesc 맛집 후기"
@@ -4707,7 +4707,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "크루아상",
           desc: "카탈루냐 과자.",
-          image: "https://blogthumb.pstatic.net/MjAyNDA1MjJfMTgx/MDAxNzE2MzY3OTEzODcw.k0tqbrbCtH8nxdoNQmB3AwhoChfNTOhKqBf4lIbXDsQg.5ZKQHAVWEdti6RX1M0AKfQlKXEHfHjPTIzENT7EDh08g.JPEG/BE5DF241-F02A-4CE3-9F27-08C3D18C6F9C.jpeg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Bread_in_basket.jpg/960px-Bread_in_basket.jpg",
           coords: [41.9845, 2.8225],
           blogUrl: "https://blog.naver.com/wngml3944/223455045605",
           blogTitle: "지로나 Pastelería Pi 맛집 후기"
@@ -4717,7 +4717,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "크루아상",
           desc: "수제 빵.",
-          image: "https://blogthumb.pstatic.net/MjAyMTA0MjZfODkg/MDAxNjE5MzgwOTQ4MTM3.FaP8fllN9N6AVrcJmoYZO03mw0Oi0VbGxpwfK690BhEg.Dei6GdqlT1-sDrJ638OQvLDQKxJVyD3Kof5qbcpbzggg.JPEG.sweety7511/IMG_0974.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Tortilla_de_patatas.jpg/960px-Tortilla_de_patatas.jpg",
           coords: [41.9855, 2.8215],
           blogUrl: "https://blog.naver.com/sweety7511/222323130491",
           blogTitle: "지로나 Forn Cal Pla 맛집 후기"
@@ -4914,7 +4914,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "카페 라떼",
           desc: "1912년 카디스 카페.",
-          image: "https://blogthumb.pstatic.net/MjAxODAyMTdfNTUg/MDAxNTE4ODAwMTg0OTMw.R1cXyp5gTzLv4Kaw09FLnnifH2sfb61jxb2NRQL52D0g.GiVAai8ew1tAjnSSA-vd0qsUh53TJleoJ_HkHI2OfZcg.JPEG.helenaloki/IMG_1288.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Caf%C3%A9_con_leche.jpg/960px-Caf%C3%A9_con_leche.jpg",
           coords: [36.5295, -6.2935],
           blogUrl: "https://blog.naver.com/helenaloki/221210085326",
           blogTitle: "카디스 Café Royalty 맛집 후기"
@@ -4924,7 +4924,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "카페 라떼",
           desc: "플라za San Antonio.",
-          image: "https://postfiles.pstatic.net/MjAyNDAxMDlfMTE3/MDAxNzA0NzM4MTY4MTky.IIc02zWDI0AA47SOr8hCVBHyFrl8tBI7mRMDOdguoLYg.Tq1T4uYIrYK5fWjGTw0cU8G7bR4FOTVaMZCsFapAekAg.JPEG.jane0710/CF315316-35C9-47A7-AEF6-4B4F1C2FA1E6-702-000000096951F0CF.jpeg?type=w80_blur",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Latte_art_3.jpg/960px-Latte_art_3.jpg",
           coords: [36.5305, -6.2945],
           blogUrl: "https://blog.naver.com/jane0710/223311606734",
           blogTitle: "카디스 Café de París 맛집 후기"
@@ -4934,7 +4934,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "카페 con leche",
           desc: "현지인 카페.",
-          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Caf%C3%A9_con_leche.jpg/960px-Caf%C3%A9_con_leche.jpg",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Flat_white_coffee_with_pretty_feather_pattern.jpg/960px-Flat_white_coffee_with_pretty_feather_pattern.jpg",
           coords: [36.5285, -6.294],
           blogUrl: "https://search.naver.com/search.naver?where=blog&query=%EC%B9%B4%EB%94%94%EC%8A%A4%20Caf%C3%A9%20Columela%20%EB%A7%9B%EC%A7%91",
           blogTitle: "카디스 Café Columela 블로그 검색"
@@ -4946,7 +4946,7 @@ window.CITIES = [
           rating: 4.6,
           menu: "추로스",
           desc: "1925년 churros·과자.",
-          image: "https://postfiles.pstatic.net/MjAyNTA1MTZfODMg/MDAxNzQ3MzU4MjYzNzQw.nosBIIVl3Hvf9IoMsOD0TM7wWcAmyUuthIX6omoCS1og.5kAQX76FG7WzEMo7aParCUdnUa6r-dOfpzD8Zxn3IpYg.JPEG/%EC%82%AC%EC%A7%84_9.jpg?type=w466",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Croissant-Petr_Kratochvil.jpg/960px-Croissant-Petr_Kratochvil.jpg",
           coords: [36.5298, -6.293],
           blogUrl: "https://blog.naver.com/the_trip_/223867384928",
           blogTitle: "카디스 Casa Hidalgo 맛집 후기"
@@ -4956,7 +4956,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "전통 과자",
           desc: "카디스 전통 과자.",
-          image: "https://blogthumb.pstatic.net/MjAyMTExMTBfMjE1/MDAxNjM2NTM5ODEwNTk0.FAbpgE085zvd_xTHrvRmtXDBzlzS55ILni3iUPufBRcg.MydSgM6EUvfOl0gU-82V8u8zk4f2NUVrk0ob6nk2l80g.JPEG.enjoy_life00/KakaoTalk_20211110_105521572_11.jpg?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Bread_in_basket.jpg/960px-Bread_in_basket.jpg",
           coords: [36.5292, -6.2928],
           blogUrl: "https://blog.naver.com/enjoy_life00/222564571739",
           blogTitle: "카디스 Pastelería La Rosa 맛집 후기"
@@ -4966,7 +4966,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "사워도우",
           desc: "안달루시아 빵.",
-          image: "https://postfiles.pstatic.net/MjAyNDAxMDNfMjE4/MDAxNzA0MjgyMTc4ODQ4.pg27AnB4GJZvgIjGkkrpVOP2WGOB8niP6yuXSijrd6kg.ayyWU47FJyXMyma5gV0joXFd9IVtrYH9Yj5POwkIwwYg.JPEG.jane0710/SE-0b297970-d91b-4e66-bd06-9fb68f5397cc.jpg",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Tortilla_de_patatas.jpg/960px-Tortilla_de_patatas.jpg",
           coords: [36.5282, -6.2938],
           blogUrl: "https://blog.naver.com/jane0710/223311606734",
           blogTitle: "카디스 Panadería El Rio 맛집 후기"
@@ -5143,7 +5143,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "필터 커피",
           desc: "로마 유적 근처.",
-          image: "https://postfiles.pstatic.net/MjAyNDEwMjNfMjI3/MDAxNzI5NjY3OTc0OTAy.44Pr2BUM9xZEyhuK16RIhMQom0GVzFIp79UERQthg-4g.ozZHVQksuNnkWrYQpregbQ2J2zMBrLB0ym9zrwEi3bEg.JPEG/SE-DD3F84F3-F68A-4BFD-B90D-26B43FAE7545.jpg",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Caf%C3%A9_con_leche.jpg/960px-Caf%C3%A9_con_leche.jpg",
           coords: [41.1188, 1.2458],
           blogUrl: "https://blog.naver.com/dp3453/223630509402",
           blogTitle: "타라고나 Café de la Plaça 맛집 후기"
@@ -5153,7 +5153,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "플랫 화이트",
           desc: "타라고나 전통.",
-          image: "https://postfiles.pstatic.net/MjAyNDA0MTRfNzUg/MDAxNzEzMDg2OTc0OTEy.YsTeyDS0htyEHheaeGVvTVzbpKWVEpNLESPPvMzNKJQg.gcSdfNvjeTkdV2fgvzujvBHOLBJg0MgP6mLTJmFipZ8g.JPEG/P1030757.jpg?type=w466",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Latte_art_3.jpg/960px-Latte_art_3.jpg",
           coords: [41.1182, 1.2448],
           blogUrl: "https://blog.naver.com/quiipen/223415275898",
           blogTitle: "타라고나 Café Metropol 맛집 후기"
@@ -5163,7 +5163,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "브런치 세트",
           desc: "램bla 카페.",
-          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Panor%C3%A1mica_Guadalajara_desde_edificio_Bansi_hacia_norte_%28cropped%29.jpg/960px-Panor%C3%A1mica_Guadalajara_desde_edificio_Bansi_hacia_norte_%28cropped%29.jpg",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Flat_white_coffee_with_pretty_feather_pattern.jpg/960px-Flat_white_coffee_with_pretty_feather_pattern.jpg",
           coords: [41.1175, 1.2468],
           blogUrl: "https://blog.naver.com/dp3453/223630509402",
           blogTitle: "타라고나 Café de la Rambla 맛집 후기"
@@ -5175,7 +5175,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "전통 과자",
           desc: "coca·카탈루냐 과자.",
-          image: "https://postfiles.pstatic.net/MjAyNDA0MTRfOTgg/MDAxNzEzMDg2OTcyOTE5.AWDhFcOD0AlajN5pnFabgmjVfcMh9B2JHmalDWV27VQg.eURiKZNiepDk3aiWysmFULktTvcTmqcOfRIiu4EJ2agg.JPEG/P1030745.jpg",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Croissant-Petr_Kratochvil.jpg/960px-Croissant-Petr_Kratochvil.jpg",
           coords: [41.1198, 1.2438],
           blogUrl: "https://blog.naver.com/quiipen/223415275898",
           blogTitle: "타라고나 Pastelería San Mateo 맛집 후기"
@@ -5185,7 +5185,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "파티스리",
           desc: "전통 빵.",
-          image: "https://blogthumb.pstatic.net/MjAxODA5MTJfOTMg/MDAxNTM2NzIyNjYwOTIx.QrJt9EnqxDlV0FzVyCJvV38fB06KbQh0iqiL4coTICAg.RHkpuzaCa_KGKO9mC3xcSFWAAeY9qpYiFBTL_LrgTr8g.PNG.bananasang0223/image.png?type=w2",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Bread_in_basket.jpg/960px-Bread_in_basket.jpg",
           coords: [41.1168, 1.2475],
           blogUrl: "https://blog.naver.com/bananasang0223/221357424359",
           blogTitle: "타라고나 Panadería La Reina 맛집 후기"
@@ -5195,7 +5195,7 @@ window.CITIES = [
           rating: 4.5,
           menu: "수제 빵",
           desc: "타라고나 디저트.",
-          image: "https://postfiles.pstatic.net/MjAyNDA0MTRfNzUg/MDAxNzEzMDg2OTc0OTEy.YsTeyDS0htyEHheaeGVvTVzbpKWVEpNLESPPvMzNKJQg.gcSdfNvjeTkdV2fgvzujvBHOLBJg0MgP6mLTJmFipZ8g.JPEG/P1030757.jpg",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Tortilla_de_patatas.jpg/960px-Tortilla_de_patatas.jpg",
           coords: [41.119, 1.2435],
           blogUrl: "https://blog.naver.com/quiipen/223415275898",
           blogTitle: "타라고나 Confitería La Tarasca 맛집 후기"

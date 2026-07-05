@@ -124,8 +124,12 @@
     const CITIES = window.CITIES || [];
 
     const OPENAI_API_URL = 'https://api.openai.com/v1/chat/completions';
+    const OPENAI_RESPONSES_URL = 'https://api.openai.com/v1/responses';
     const API_KEY_STORAGE = 'espana_voyage_openai_api_key';
     const MODEL_STORAGE = 'espana_voyage_openai_model';
+    const IMAGE_MODEL_STORAGE = 'espana_voyage_openai_image_model';
+
+    const getStoredApiKey = () => localStorage.getItem(API_KEY_STORAGE) || '';
 
     const summarizeCity = (city) => {
       if (!city) return '';
@@ -177,7 +181,7 @@ ${cityIndex}`;
     const TravelChatbot = ({ selectedCity, activeTab }) => {
       const [open, setOpen] = useState(false);
       const [showSettings, setShowSettings] = useState(false);
-      const [apiKey, setApiKey] = useState(() => localStorage.getItem(API_KEY_STORAGE) || '');
+      const [apiKey, setApiKey] = useState(() => getStoredApiKey());
       const [model, setModel] = useState(() => localStorage.getItem(MODEL_STORAGE) || 'gpt-4o-mini');
       const [input, setInput] = useState('');
       const [loading, setLoading] = useState(false);
@@ -397,6 +401,280 @@ ${cityIndex}`;
             title="여행 AI 챗봇"
           >
             {open ? '✕' : '💬'}
+          </button>
+        </>
+      );
+    };
+
+    const ImageGenBot = () => {
+      const [open, setOpen] = useState(false);
+      const [panelTab, setPanelTab] = useState('create');
+      const [imageModel, setImageModel] = useState(() => localStorage.getItem(IMAGE_MODEL_STORAGE) || 'gpt-5.5');
+      const [prompt, setPrompt] = useState('');
+      const [loading, setLoading] = useState(false);
+      const [error, setError] = useState('');
+      const [gallery, setGallery] = useState([]);
+      const [previewId, setPreviewId] = useState(null);
+
+      const previewImage = gallery.find(img => img.id === previewId) || null;
+
+      const saveImageModel = (value) => {
+        setImageModel(value);
+        localStorage.setItem(IMAGE_MODEL_STORAGE, value);
+      };
+
+      const downloadImage = (item) => {
+        const link = document.createElement('a');
+        link.href = item.dataUrl;
+        link.download = `espana-voyage-${item.id}.png`;
+        link.click();
+      };
+
+      const removeImage = (id) => {
+        setGallery(prev => prev.filter(img => img.id !== id));
+        if (previewId === id) setPreviewId(null);
+      };
+
+      const generateImage = async () => {
+        const text = prompt.trim();
+        if (!text || loading) return;
+
+        const key = getStoredApiKey();
+        if (!key) {
+          setError('OpenAI API 키를 💬 챗봇 ⚙️ 설정에서 먼저 등록해 주세요.');
+          return;
+        }
+
+        setLoading(true);
+        setError('');
+
+        try {
+          const res = await fetch(OPENAI_RESPONSES_URL, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: `Bearer ${key}`,
+            },
+            body: JSON.stringify({
+              model: imageModel.trim() || 'gpt-5.5',
+              input: text,
+              tools: [{ type: 'image_generation', action: 'generate' }],
+              tool_choice: { type: 'image_generation' },
+            }),
+          });
+
+          const data = await res.json();
+          if (!res.ok) {
+            throw new Error(data.error?.message || `API 오류 (${res.status})`);
+          }
+
+          const imageCalls = (data.output || []).filter(o => o.type === 'image_generation_call');
+          const base64 = imageCalls[0]?.result;
+          if (!base64) {
+            throw new Error('이미지 데이터를 받지 못했습니다. 프롬프트를 바꿔 다시 시도해 주세요.');
+          }
+
+          const newImage = {
+            id: String(Date.now()),
+            prompt: text,
+            dataUrl: `data:image/png;base64,${base64}`,
+            createdAt: new Date().toISOString(),
+          };
+
+          setGallery(prev => [newImage, ...prev]);
+          setPreviewId(newImage.id);
+          setPanelTab('gallery');
+          setPrompt('');
+        } catch (err) {
+          setError(err.message || '이미지 생성에 실패했습니다.');
+        } finally {
+          setLoading(false);
+        }
+      };
+
+      const handleKeyDown = (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+          e.preventDefault();
+          generateImage();
+        }
+      };
+
+      return (
+        <>
+          <AnimatePresence>
+            {open && (
+              <motion.div
+                initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 20, scale: 0.95 }}
+                className="fixed bottom-24 left-4 md:left-6 z-[100] w-[min(100vw-2rem,420px)] h-[min(78vh,580px)] glass-panel rounded-[2rem] border-2 border-white/70 shadow-2xl flex flex-col overflow-hidden"
+              >
+                <div className="px-4 py-3 bg-gradient-to-r from-secondary to-blue-700 text-white flex items-center justify-between shrink-0">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl">🎨</span>
+                    <div>
+                      <p className="font-extrabold text-sm leading-tight">AI Image Studio</p>
+                      <p className="text-[10px] text-white/80">OpenAI Image Generation</p>
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => setOpen(false)}
+                    className="w-8 h-8 rounded-xl bg-white/20 hover:bg-white/30 flex items-center justify-center font-bold"
+                  >
+                    ✕
+                  </button>
+                </div>
+
+                <div className="flex border-b border-outline-variant/30 bg-white/50 shrink-0">
+                  <button
+                    type="button"
+                    onClick={() => setPanelTab('create')}
+                    className={`flex-1 py-2.5 text-xs font-bold transition-colors ${panelTab === 'create' ? 'text-secondary border-b-2 border-secondary bg-white/80' : 'text-outline hover:bg-white/60'}`}
+                  >
+                    ✏️ 프롬프트
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setPanelTab('gallery')}
+                    className={`flex-1 py-2.5 text-xs font-bold transition-colors ${panelTab === 'gallery' ? 'text-secondary border-b-2 border-secondary bg-white/80' : 'text-outline hover:bg-white/60'}`}
+                  >
+                    🖼️ 갤러리 {gallery.length > 0 && `(${gallery.length})`}
+                  </button>
+                </div>
+
+                {panelTab === 'create' ? (
+                  <div className="flex-1 flex flex-col min-h-0">
+                    <div className="p-4 space-y-3 flex-1 overflow-y-auto chat-scroll">
+                      <p className="text-[11px] text-outline leading-relaxed bg-secondary/5 border border-secondary/10 rounded-xl px-3 py-2">
+                        API 키는 💬 챗봇 ⚙️ 설정과 동일한 키를 사용합니다.
+                        {getStoredApiKey() ? (
+                          <span className="block mt-1 text-emerald-700 font-bold">✓ API 키 등록됨</span>
+                        ) : (
+                          <span className="block mt-1 text-tertiary font-bold">⚠ 챗봇에서 API 키를 먼저 저장하세요</span>
+                        )}
+                      </p>
+                      <div>
+                        <label className="text-[10px] font-bold uppercase tracking-wider text-outline block mb-1">Image Model</label>
+                        <select
+                          value={imageModel}
+                          onChange={(e) => saveImageModel(e.target.value)}
+                          className="w-full px-3 py-2 rounded-xl border border-outline-variant/40 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-secondary/30"
+                        >
+                          <option value="gpt-5.5">gpt-5.5 (권장)</option>
+                          <option value="gpt-5">gpt-5</option>
+                          <option value="gpt-4o">gpt-4o</option>
+                          <option value="gpt-4o-mini">gpt-4o-mini</option>
+                        </select>
+                      </div>
+                      <div>
+                        <label className="text-[10px] font-bold uppercase tracking-wider text-outline block mb-1">프롬프트</label>
+                        <textarea
+                          value={prompt}
+                          onChange={(e) => setPrompt(e.target.value)}
+                          onKeyDown={handleKeyDown}
+                          rows={6}
+                          placeholder="예: 스페인 세비야의 황금빛 석양 아래 플라자 데 에스파냐를 수채화 스타일로 그려줘"
+                          className="w-full px-3 py-2 rounded-xl border border-outline-variant/40 bg-white text-sm resize-none focus:outline-none focus:ring-2 focus:ring-secondary/30 leading-relaxed"
+                        />
+                      </div>
+                      {loading && (
+                        <div className="flex items-center gap-3 p-3 rounded-xl bg-white border border-secondary/20 text-sm text-outline">
+                          <div className="w-5 h-5 border-2 border-secondary border-t-transparent rounded-full animate-spin shrink-0"></div>
+                          <span>이미지를 생성하는 중입니다… (30초~1분 소요)</span>
+                        </div>
+                      )}
+                    </div>
+                    {error && (
+                      <div className="px-4 py-2 text-xs text-tertiary bg-red-50 border-t border-red-100 shrink-0">{error}</div>
+                    )}
+                    <div className="p-3 border-t border-white/60 bg-white/60 shrink-0">
+                      <button
+                        type="button"
+                        onClick={generateImage}
+                        disabled={loading || !prompt.trim()}
+                        className="w-full py-3 rounded-xl bg-gradient-to-br from-secondary to-blue-700 text-white font-bold text-sm disabled:opacity-40 shadow-md hover:shadow-lg transition-shadow"
+                      >
+                        {loading ? '생성 중…' : '🎨 이미지 생성'}
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="flex-1 flex flex-col min-h-0">
+                    {gallery.length === 0 ? (
+                      <div className="flex-1 flex flex-col items-center justify-center p-8 text-center text-outline">
+                        <span className="text-5xl mb-4 opacity-40">🖼️</span>
+                        <p className="font-bold text-sm">아직 생성된 이미지가 없습니다</p>
+                        <p className="text-xs mt-2 leading-relaxed">프롬프트 탭에서 이미지를 생성하면<br />여기에 모아서 볼 수 있습니다.</p>
+                        <button
+                          type="button"
+                          onClick={() => setPanelTab('create')}
+                          className="mt-4 px-4 py-2 rounded-xl bg-secondary/10 text-secondary text-xs font-bold hover:bg-secondary/20"
+                        >
+                          프롬프트 작성하기
+                        </button>
+                      </div>
+                    ) : (
+                      <>
+                        {previewImage && (
+                          <div className="p-3 border-b border-outline-variant/20 bg-white/50 shrink-0">
+                            <div className="relative rounded-2xl overflow-hidden border-2 border-white shadow-lg bg-black/5">
+                              <img src={previewImage.dataUrl} alt={previewImage.prompt} className="w-full max-h-48 object-contain bg-white" />
+                            </div>
+                            <p className="text-xs text-on-surface mt-2 line-clamp-2 leading-relaxed font-medium">{previewImage.prompt}</p>
+                            <div className="flex gap-2 mt-2">
+                              <button
+                                type="button"
+                                onClick={() => downloadImage(previewImage)}
+                                className="flex-1 py-1.5 rounded-lg bg-secondary/10 text-secondary text-[11px] font-bold hover:bg-secondary/20"
+                              >
+                                ⬇️ 다운로드
+                              </button>
+                              <button
+                                type="button"
+                                onClick={() => removeImage(previewImage.id)}
+                                className="px-3 py-1.5 rounded-lg bg-red-50 text-tertiary text-[11px] font-bold hover:bg-red-100"
+                              >
+                                삭제
+                              </button>
+                            </div>
+                          </div>
+                        )}
+                        <div className="flex-1 overflow-y-auto p-3 chat-scroll">
+                          <div className="grid grid-cols-2 gap-2">
+                            {gallery.map((item) => (
+                              <button
+                                key={item.id}
+                                type="button"
+                                onClick={() => setPreviewId(item.id)}
+                                className={`relative aspect-square rounded-xl overflow-hidden border-2 transition-all ${previewId === item.id ? 'border-secondary ring-2 ring-secondary/30 shadow-lg scale-[1.02]' : 'border-white hover:border-secondary/40 shadow-sm'}`}
+                              >
+                                <img src={item.dataUrl} alt={item.prompt} className="w-full h-full object-cover" />
+                                {previewId === item.id && (
+                                  <div className="absolute inset-0 ring-2 ring-inset ring-secondary/50 pointer-events-none"></div>
+                                )}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      </>
+                    )}
+                    {error && panelTab === 'gallery' && (
+                      <div className="px-4 py-2 text-xs text-tertiary bg-red-50 border-t border-red-100 shrink-0">{error}</div>
+                    )}
+                  </div>
+                )}
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          <button
+            type="button"
+            onClick={() => setOpen(v => !v)}
+            className="fixed bottom-6 right-[5.25rem] md:right-[5.75rem] z-[100] w-14 h-14 rounded-full bg-gradient-to-br from-secondary to-blue-700 text-white shadow-2xl shadow-blue-500/40 flex items-center justify-center text-2xl hover:scale-105 active:scale-95 transition-transform sun-kissed-glow border-4 border-white/80"
+            title="AI 이미지 생성"
+          >
+            {open ? '✕' : '🎨'}
           </button>
         </>
       );
@@ -986,6 +1264,7 @@ ${cityIndex}`;
             </div>
           </div>
         </div>
+        <ImageGenBot />
         <TravelChatbot selectedCity={selectedCity} activeTab={activeTab} />
         </>
       );

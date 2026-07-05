@@ -274,7 +274,7 @@ ${cityIndex}`;
                 initial={{ opacity: 0, y: 20, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 20, scale: 0.95 }}
-                className="fixed bottom-24 right-4 md:right-6 z-[100] w-[min(100vw-2rem,380px)] h-[min(70vh,520px)] glass-panel rounded-[2rem] border-2 border-white/70 shadow-2xl flex flex-col overflow-hidden"
+                className="fixed bottom-24 right-4 md:right-6 z-[200] w-[min(100vw-2rem,380px)] h-[min(70vh,520px)] glass-panel rounded-[2rem] border-2 border-white/70 shadow-2xl flex flex-col overflow-hidden"
               >
                 <div className="px-4 py-3 bg-gradient-to-r from-primary to-orange-600 text-white flex items-center justify-between shrink-0">
                   <div className="flex items-center gap-2">
@@ -397,7 +397,7 @@ ${cityIndex}`;
           <button
             type="button"
             onClick={() => setOpen(v => !v)}
-            className="fixed bottom-6 right-4 md:right-6 z-[100] w-14 h-14 rounded-full bg-gradient-to-br from-primary to-orange-600 text-white shadow-2xl shadow-orange-500/40 flex items-center justify-center text-2xl hover:scale-105 active:scale-95 transition-transform sun-kissed-glow border-4 border-white/80"
+            className="fixed bottom-6 right-4 md:right-6 z-[200] w-14 h-14 rounded-full bg-gradient-to-br from-primary to-orange-600 text-white shadow-2xl shadow-orange-500/40 flex items-center justify-center text-2xl hover:scale-105 active:scale-95 transition-transform sun-kissed-glow border-4 border-white/80"
             title="여행 AI 챗봇"
           >
             {open ? '✕' : '💬'}
@@ -507,7 +507,7 @@ ${cityIndex}`;
                 initial={{ opacity: 0, y: 20, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 20, scale: 0.95 }}
-                className="fixed bottom-24 left-4 md:left-6 z-[100] w-[min(100vw-2rem,420px)] h-[min(78vh,580px)] glass-panel rounded-[2rem] border-2 border-white/70 shadow-2xl flex flex-col overflow-hidden"
+                className="fixed bottom-24 left-4 md:left-6 z-[200] w-[min(100vw-2rem,420px)] h-[min(78vh,580px)] glass-panel rounded-[2rem] border-2 border-white/70 shadow-2xl flex flex-col overflow-hidden"
               >
                 <div className="px-4 py-3 bg-gradient-to-r from-secondary to-blue-700 text-white flex items-center justify-between shrink-0">
                   <div className="flex items-center gap-2">
@@ -668,14 +668,19 @@ ${cityIndex}`;
             )}
           </AnimatePresence>
 
-          <button
-            type="button"
-            onClick={() => setOpen(v => !v)}
-            className="fixed bottom-6 right-[5.25rem] md:right-[5.75rem] z-[100] w-14 h-14 rounded-full bg-gradient-to-br from-secondary to-blue-700 text-white shadow-2xl shadow-blue-500/40 flex items-center justify-center text-2xl hover:scale-105 active:scale-95 transition-transform sun-kissed-glow border-4 border-white/80"
-            title="AI 이미지 생성"
-          >
-            {open ? '✕' : '🎨'}
-          </button>
+          <div className="fixed bottom-6 left-4 md:left-6 z-[200] flex flex-col items-center gap-1">
+            <button
+              type="button"
+              onClick={() => setOpen(v => !v)}
+              className="w-14 h-14 rounded-full bg-gradient-to-br from-secondary to-blue-700 text-white shadow-2xl shadow-blue-500/40 flex items-center justify-center text-2xl hover:scale-105 active:scale-95 transition-transform sun-kissed-glow border-4 border-white/80"
+              title="AI 이미지 생성"
+            >
+              {open ? '✕' : '🎨'}
+            </button>
+            <span className="text-[10px] font-extrabold text-secondary bg-white/90 px-2 py-0.5 rounded-full shadow-sm border border-secondary/20 pointer-events-none">
+              이미지
+            </span>
+          </div>
         </>
       );
     };
@@ -799,8 +804,11 @@ ${cityIndex}`;
         window.open(`https://www.google.com/maps/search/?api=1&query=${query}`, '_blank');
       };
 
-      if (loading) {
-        return (
+      const currentExcelSheet = sheets.find(s => s.name === activeTab);
+
+      return (
+        <>
+        {loading ? (
           <div className="min-h-screen flex items-center justify-center bg-surface">
             <div className="animate-pulse flex flex-col items-center">
               <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
@@ -808,13 +816,7 @@ ${cityIndex}`;
               <p className="text-sm text-outline mt-2 font-medium">여행 정보를 준비하고 있습니다</p>
             </div>
           </div>
-        );
-      }
-
-      const currentExcelSheet = sheets.find(s => s.name === activeTab);
-
-      return (
-        <>
+        ) : (
         <div className="h-screen flex flex-col font-sans relative z-10 p-3 lg:p-6">
           
           <header className="glass-panel shrink-0 px-8 py-5 flex flex-col md:flex-row gap-4 items-center justify-between rounded-[2.5rem] mb-6 z-50 overflow-hidden relative border-t-white border-l-white">
@@ -1264,6 +1266,7 @@ ${cityIndex}`;
             </div>
           </div>
         </div>
+        )}
         <ImageGenBot />
         <TravelChatbot selectedCity={selectedCity} activeTab={activeTab} />
         </>

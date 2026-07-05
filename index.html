@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>España Voyage - Spain Travel Dashboard</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            surface: '#fff8f5',
+            background: '#fff8f5',
+            'on-surface': '#1e1b18',
+            'on-surface-variant': '#554434',
+            primary: '#8b5000',
+            'primary-container': '#ff9800',
+            'on-primary-container': '#653900',
+            secondary: '#175ead',
+            'secondary-container': '#72aafe',
+            tertiary: '#bb171c',
+            outline: '#887361',
+            'outline-variant': '#dbc2ad',
+            'surface-container': '#f5ece7',
+            'surface-container-low': '#fbf2ed',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+  <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="./data.js"></script>
+  <script src="./citiesData.js"></script>
+
+  <style>
+    body {
+      background-color: #fff8f5;
+      color: #1e1b18;
+      font-family: 'Inter', system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4, .font-serif-heading {
+      font-family: 'Inter', sans-serif;
+    }
+    .hero-bg {
+      background-image: linear-gradient(rgba(255, 248, 245, 0.85), rgba(255, 248, 245, 0.85)),
+        url('https://lh3.googleusercontent.com/aida-public/AB6AXuCb3ixaNLFip7iax3nAXKn_sxVXkRKOqB5C1DUPrPTEUOWMD-ZgHulprFqnbb11kYwEzME6gR6JJ_tGwCGjfLpEa5uuf3EjsIaD4feUxUk4x2KlDRFN-yse5YyEopBfswif_vUqrj6KTfZk7zZnb4eyy4yxZhf_4xTeGk0b6stHCSl_01oJfUxaWit9nf-NcyJZhsiJYHElnNMydyioyId1Y_JZ5ilRkTJ3FPz_0XkApexMtxiLkuH3kYH3DpngXaQVraLGt0R_1Iw');
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+    }
+    .azulejo-pattern {
+      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCb3ixaNLFip7iax3nAXKn_sxVXkRKOqB5C1DUPrPTEUOWMD-ZgHulprFqnbb11kYwEzME6gR6JJ_tGwCGjfLpEa5uuf3EjsIaD4feUxUk4x2KlDRFN-yse5YyEopBfswif_vUqrj6KTfZk7zZnb4eyy4yxZhf_4xTeGk0b6stHCSl_01oJfUxaWit9nf-NcyJZhsiJYHElnNMydyioyId1Y_JZ5ilRkTJ3FPz_0XkApexMtxiLkuH3kYH3DpngXaQVraLGt0R_1Iw');
+      background-size: 200px;
+      opacity: 0.08;
+    }
+    .glass-panel {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      box-shadow: 0 8px 32px rgba(139, 80, 0, 0.08);
+    }
+    .glass-panel-elevated {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .material-symbols-outlined.filled {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .sun-kissed-glow:hover {
+      box-shadow: 0 0 25px rgba(249, 115, 22, 0.3);
+    }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #dbc2ad; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #887361; }
+    .leaflet-container { font-family: 'Inter', sans-serif; }
+    .custom-tooltip {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(5px);
+      border: 2px solid #f97316;
+      border-radius: 12px;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(139, 80, 0, 0.15);
+      padding: 8px 12px;
+      color: #2c1600;
+    }
+  </style>
+</head>
+<body class="text-on-surface hero-bg min-h-screen">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect, useRef } = React;
+    const { motion, AnimatePresence } = window.Motion;
+    
+    // We use CITIES from window.CITIES populated by citiesData.js
+    const CITIES = window.CITIES || [];
+
+    const MapComponent = ({ selectedCity, activeLocation, onCitySelect }) => {
+      const mapRef = useRef(null);
+      const leafletMap = useRef(null);
+      const cityMarkersRef = useRef({});
+      const activeMarkerRef = useRef(null);
+
+      useEffect(() => {
+        if (!mapRef.current) return;
+
+        leafletMap.current = L.map(mapRef.current, { zoomControl: false }).setView([39.3260685, -4.8379791], 6);
+        L.control.zoom({ position: 'bottomright' }).addTo(leafletMap.current);
+
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+          attribution: '&copy; OpenStreetMap &copy; CARTO',
+          subdomains: 'abcd',
+          maxZoom: 20
+        }).addTo(leafletMap.current);
+
+        // Add City Markers
+        CITIES.forEach(city => {
+          const marker = L.circleMarker(city.coordinates, {
+            radius: 8, fillColor: "#f97316", color: "#fff", weight: 3, opacity: 1, fillOpacity: 1
+          }).addTo(leafletMap.current);
+
+          marker.bindTooltip(`<b>${city.nameKo}</b><br><span style="font-size:0.8em;color:#666;">${city.nameEs}</span>`, { direction: 'top', offset: [0, -10], className: 'custom-tooltip' });
+          marker.on('click', () => onCitySelect(city));
+          cityMarkersRef.current[city.id] = marker;
+        });
+
+        return () => { if (leafletMap.current) leafletMap.current.remove(); };
+      }, []);
+
+      // Handle zooming to city or specific location
+      useEffect(() => {
+        if (leafletMap.current) {
+          if (activeLocation) {
+            // Zoom to specific attraction/restaurant
+            leafletMap.current.flyTo(activeLocation.coords, 16, { animate: true, duration: 1.5 });
+            
+            // Manage active pointer marker
+            if (activeMarkerRef.current) leafletMap.current.removeLayer(activeMarkerRef.current);
+            
+            const pinEmoji = activeLocation.type === 'stadium' ? '⚽' : activeLocation.type === 'restaurant' ? '🥘' : '📍';
+            const customIcon = L.divIcon({
+              html: `<div style="font-size:32px;filter:drop-shadow(0 4px 6px rgba(0,0,0,0.3));transform:translate(-50%,-100%);">${pinEmoji}</div>`,
+              className: '', iconSize: [0,0], iconAnchor: [0,0]
+            });
+            activeMarkerRef.current = L.marker(activeLocation.coords, { icon: customIcon }).addTo(leafletMap.current);
+            activeMarkerRef.current.bindTooltip(`<b>${activeLocation.name}</b>`, { direction: 'top', offset: [0, -35], className: 'custom-tooltip' }).openTooltip();
+
+          } else if (selectedCity) {
+            // Zoom to city
+            leafletMap.current.flyTo(selectedCity.coordinates, selectedCity.zoom, { animate: true, duration: 1.5 });
+            if (activeMarkerRef.current) {
+               leafletMap.current.removeLayer(activeMarkerRef.current);
+               activeMarkerRef.current = null;
+            }
+            // Highlight city marker
+            Object.values(cityMarkersRef.current).forEach(m => m.setStyle({ fillColor: '#f97316', radius: 8, weight: 3 }));
+            if (cityMarkersRef.current[selectedCity.id]) {
+               cityMarkersRef.current[selectedCity.id].setStyle({ fillColor: '#bb171c', radius: 12, weight: 4 });
+               cityMarkersRef.current[selectedCity.id].openTooltip();
+            }
+          } else {
+            // Reset map
+            leafletMap.current.flyTo([39.3260685, -4.8379791], 6, { animate: true, duration: 1.5 });
+            if (activeMarkerRef.current) {
+               leafletMap.current.removeLayer(activeMarkerRef.current);
+               activeMarkerRef.current = null;
+            }
+            Object.values(cityMarkersRef.current).forEach(m => {
+               m.setStyle({ fillColor: '#f97316', radius: 8, weight: 3 });
+               m.closeTooltip();
+            });
+          }
+        }
+      }, [selectedCity, activeLocation]);
+
+      return <div ref={mapRef} className="w-full h-full rounded-[2rem] overflow-hidden shadow-inner z-0 border-4 border-white/80" />;
+    };
+    
+    const App = () => {
+      const [sheets, setSheets] = useState([]);
+      const [activeTab, setActiveTab] = useState("guide");
+      const [selectedCity, setSelectedCity] = useState(null);
+      const [activeLocation, setActiveLocation] = useState(null); // specific attraction/restaurant
+      const [loading, setLoading] = useState(true);
+
+      useEffect(() => {
+        try {
+          if (!window.excelBase64) throw new Error("No excel data found");
+          const b64 = window.excelBase64.replace(/\s/g, '');
+          const binaryStr = atob(b64);
+          const len = binaryStr.length;
+          const bytes = new Uint8Array(len);
+          for (let i = 0; i < len; i++) bytes[i] = binaryStr.charCodeAt(i);
+          
+          const workbook = XLSX.read(bytes.buffer, { type: 'array' });
+          const parsedSheets = workbook.SheetNames.map(name => {
+            const worksheet = workbook.Sheets[name];
+            const jsonData = XLSX.utils.sheet_to_json(worksheet, { defval: "" });
+            let columns = [];
+            if (jsonData.length > 0) columns = Object.keys(jsonData[0]).filter(col => !col.startsWith('__EMPTY'));
+            return { name, data: jsonData, columns: columns };
+          });
+          setSheets(parsedSheets);
+          setLoading(false);
+        } catch (error) {
+          console.error("Error parsing Excel:", error);
+          setLoading(false);
+        }
+      }, []);
+
+      const openGoogleMaps = (e, name, city) => {
+        e.stopPropagation();
+        const query = encodeURIComponent(`${name} ${city}`);
+        window.open(`https://www.google.com/maps/search/?api=1&query=${query}`, '_blank');
+      };
+
+      if (loading) {
+        return (
+          <div className="min-h-screen flex items-center justify-center bg-surface">
+            <div className="animate-pulse flex flex-col items-center">
+              <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+              <h2 className="mt-6 text-3xl font-sans font-bold text-primary">Preparando su viaje...</h2>
+              <p className="text-sm text-outline mt-2 font-medium">여행 정보를 준비하고 있습니다</p>
+            </div>
+          </div>
+        );
+      }
+
+      const currentExcelSheet = sheets.find(s => s.name === activeTab);
+
+      return (
+        <div className="h-screen flex flex-col font-sans relative z-10 p-3 lg:p-6">
+          
+          <header className="glass-panel shrink-0 px-8 py-5 flex flex-col md:flex-row gap-4 items-center justify-between rounded-[2.5rem] mb-6 z-50 overflow-hidden relative border-t-white border-l-white">
+            <div className="absolute inset-0 azulejo-pattern pointer-events-none"></div>
+            <div className="flex items-center gap-4 w-full md:w-auto relative z-10">
+              <span className="text-4xl drop-shadow-lg">☀️</span>
+              <div>
+                <h1 className="text-2xl md:text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary to-tertiary tracking-tight whitespace-nowrap">
+                  España Voyage
+                </h1>
+                <p className="text-[10px] uppercase tracking-widest font-bold text-outline opacity-70">Travel &amp; Discovery Guide</p>
+              </div>
+            </div>
+            
+            <div className="flex gap-2 bg-white/50 p-2 rounded-2xl shadow-sm border border-white/60 overflow-x-auto w-full md:w-auto relative z-10">
+               <button
+                  onClick={() => { setActiveTab("guide"); setActiveLocation(null); }}
+                  className={`px-6 py-2.5 rounded-xl text-sm font-bold transition-all whitespace-nowrap flex items-center gap-2 ${
+                    activeTab === "guide" ? 'bg-gradient-to-br from-primary to-orange-600 text-white shadow-lg shadow-orange-500/30' : 'text-primary hover:bg-white/80'
+                  }`}
+                >
+                  <span>🗺️</span> Map &amp; Guide
+                </button>
+               {sheets.map((s, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => { setActiveTab(s.name); setSelectedCity(null); setActiveLocation(null); }}
+                    className={`px-6 py-2.5 rounded-xl text-sm font-bold transition-all whitespace-nowrap flex items-center gap-2 ${
+                      activeTab === s.name ? 'bg-gradient-to-br from-primary to-orange-600 text-white shadow-lg shadow-orange-500/30' : 'text-primary hover:bg-white/80'
+                    }`}
+                  >
+                    <span>📄</span> {s.name}
+                  </button>
+                ))}
+            </div>
+          </header>
+
+          <div className="flex-1 flex flex-col lg:flex-row gap-6 min-h-0">
+            
+            <div className={`glass-panel rounded-[2.5rem] p-3 lg:w-[35%] shadow-xl flex-shrink-0 relative overflow-hidden ${activeTab !== "guide" ? "hidden lg:block opacity-40 grayscale-[0.5] pointer-events-none" : ""}`}>
+                <MapComponent 
+                  selectedCity={selectedCity} 
+                  activeLocation={activeLocation} 
+                  onCitySelect={(c) => { setActiveTab("guide"); setSelectedCity(c); setActiveLocation(null); }} 
+                />
+            </div>
+
+            {/* RIGHT: Content Panel (Now 2/3 width) */}
+            <div className="glass-panel rounded-[2.5rem] overflow-hidden shadow-2xl flex-1 flex flex-col min-w-0 border-t-white border-l-white">
+              
+              <AnimatePresence mode="wait">
+                
+                {/* 1. CITY LIST VIEW */}
+                {activeTab === "guide" && !selectedCity && (
+                  <motion.div 
+                    key="city-list"
+                    initial={{ opacity: 0, scale: 0.98 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 1.02 }}
+                    className="h-full flex flex-col p-8 overflow-y-auto"
+                  >
+                    <div className="mb-8">
+                      <h2 className="text-3xl font-extrabold text-primary mb-2">Top {CITIES.length} Destinations in Spain</h2>
+                      <p className="text-outline text-base font-medium max-w-2xl leading-relaxed">도시를 선택하면 명소, 맛집, Vlog를 탐색할 수 있습니다.</p>
+                    </div>
+                    
+                    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 pb-12">
+                      {CITIES.map((city, idx) => (
+                        <motion.button
+                          key={city.id}
+                          whileHover={{ y: -8 }}
+                          onClick={() => setSelectedCity(city)}
+                          className="relative h-64 rounded-[2rem] overflow-hidden shadow-lg group text-left border-4 border-white/60 transition-all sun-kissed-glow"
+                        >
+                          <img src={city.image} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt={city.nameEn} />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent group-hover:from-primary/90 transition-colors duration-500"></div>
+                          
+                          <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-md rounded-full px-4 py-1.5 text-xs font-bold text-white border border-white/40 shadow-sm">
+                            Destino #{idx + 1}
+                          </div>
+
+                          <div className="absolute bottom-6 left-6 right-6">
+                            <h3 className="text-2xl font-extrabold text-white mb-1 drop-shadow-lg">{city.nameKo}</h3>
+                            <div className="flex items-center gap-2 text-white/80 text-sm font-semibold mb-1.5">
+                              <span className="italic">{city.nameEs}</span>
+                              <span className="w-1.5 h-1.5 rounded-full bg-orange-400"></span>
+                              <span>{city.nameEn}</span>
+                            </div>
+                            {city.intro && (
+                              <p className="text-white/75 text-xs leading-snug line-clamp-2 mb-1.5">{city.intro}</p>
+                            )}
+                            {(city.population || city.area) && (
+                              <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-orange-200 font-bold uppercase tracking-wider">
+                                {city.population && <span>👥 {city.population}</span>}
+                                {city.area && <span>📐 {city.area}</span>}
+                              </div>
+                            )}
+                          </div>
+                        </motion.button>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+
+                {/* 2. CITY DETAIL VIEW */}
+                {activeTab === "guide" && selectedCity && (
+                  <motion.div 
+                    key="city-detail"
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -50 }}
+                    className="h-full flex flex-col overflow-y-auto"
+                  >
+                    <div className="relative h-80 shrink-0">
+                      <img src={selectedCity.image} className="w-full h-full object-cover" alt={selectedCity.nameEn} />
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-transparent"></div>
+                      
+                      <button 
+                        onClick={() => { setSelectedCity(null); setActiveLocation(null); }}
+                        className="absolute top-6 left-6 bg-white/20 hover:bg-white/40 backdrop-blur-md text-white px-5 py-2.5 rounded-2xl text-sm font-bold border border-white/40 transition-all shadow-lg flex items-center gap-2"
+                      >
+                        ← 도시 목록
+                      </button>
+                      
+                      <div className="absolute bottom-10 left-10 right-10 max-w-4xl">
+                        <h2 className="text-5xl font-extrabold text-white drop-shadow-xl mb-2">{selectedCity.nameKo}</h2>
+                        <p className="text-orange-200 font-bold text-xl mb-4 italic">{selectedCity.nameEs} · {selectedCity.nameEn}</p>
+                        {selectedCity.intro && (
+                          <p className="text-white/90 text-base leading-relaxed mb-6 drop-shadow-md max-w-2xl font-medium">{selectedCity.intro}</p>
+                        )}
+                        {(selectedCity.population || selectedCity.area) && (
+                          <div className="flex flex-wrap gap-4 text-sm">
+                            {selectedCity.population && <span className="bg-white/20 backdrop-blur-md px-4 py-2 rounded-xl border border-white/30 text-white font-bold">👥 {selectedCity.population}</span>}
+                            {selectedCity.area && <span className="bg-white/20 backdrop-blur-md px-4 py-2 rounded-xl border border-white/30 text-white font-bold">📐 {selectedCity.area}</span>}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="p-10 flex-1 space-y-16 max-w-6xl mx-auto w-full relative">
+                      <div className="absolute top-0 right-0 p-10 azulejo-pattern w-64 h-64 opacity-5 pointer-events-none"></div>
+                      
+                      {/* Attractions Section */}
+                      <section>
+                        <h3 className="text-2xl font-extrabold text-primary mb-8 flex items-center gap-3 border-b-2 border-primary/10 pb-4">
+                          <span className="text-3xl">📸</span> Major Attractions
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                          {selectedCity.attractions.map((attr, idx) => (
+                            <div 
+                              key={idx} 
+                              onClick={() => setActiveLocation({ ...attr, type: 'attraction' })}
+                              className={`bg-white/60 p-4 rounded-[2rem] border-2 cursor-pointer transition-all flex gap-5 overflow-hidden sun-kissed-glow ${
+                                activeLocation?.name === attr.name ? 'border-primary shadow-2xl ring-4 ring-primary/10' : 'border-white/80 shadow-md hover:border-orange-300'
+                              }`}
+                            >
+                              <img src={attr.image} className="w-32 h-32 object-cover rounded-2xl shadow-sm shrink-0" alt={attr.name} />
+                              <div className="flex flex-col justify-between py-1 flex-1">
+                                <div>
+                                  <h4 className="font-extrabold text-primary text-xl leading-tight mb-1">{attr.name}</h4>
+                                  <p className="text-sm text-outline font-medium line-clamp-3 leading-relaxed">{attr.desc}</p>
+                                </div>
+                                <button 
+                                  onClick={(e) => openGoogleMaps(e, attr.name, selectedCity.nameEn)}
+                                  className="mt-3 text-xs font-bold text-secondary hover:text-blue-800 bg-secondary/10 hover:bg-secondary/20 self-start px-3 py-1.5 rounded-xl transition-colors flex items-center gap-1.5"
+                                >
+                                  📍 Google Maps
+                                </button>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </section>
+
+                      {/* Football Section */}
+                      {selectedCity.football && (
+                        <section>
+                          <h3 className="text-2xl font-extrabold text-primary mb-8 flex items-center gap-3 border-b-2 border-primary/10 pb-4">
+                            <span className="text-3xl">⚽</span> 라리가 축구팀 &amp; 경기장
+                          </h3>
+                          {selectedCity.football.teams?.length > 0 ? (
+                            <div className="space-y-8">
+                              {selectedCity.football.teams.map((club, idx) => (
+                                <div key={idx} className="bg-white/70 rounded-[2.5rem] border-2 border-white shadow-lg overflow-hidden">
+                                  <div className="p-6 border-b border-white/50 bg-gradient-to-br from-green-50 to-emerald-50/30">
+                                    <div className="flex items-center gap-5 flex-wrap">
+                                      <div className="w-20 h-20 shrink-0 flex items-center justify-center bg-white rounded-2xl border-2 border-white shadow-md p-2">
+                                        {club.emblem ? (
+                                          <img
+                                            src={club.emblem}
+                                            className="w-full h-full object-contain"
+                                            alt={`${club.teamKo || club.team} 엠블럼`}
+                                            onError={(e) => { e.target.style.display = 'none'; }}
+                                          />
+                                        ) : (
+                                          <span className="text-2xl">🛡️</span>
+                                        )}
+                                      </div>
+                                      <div
+                                        onClick={() => setActiveLocation({ name: club.stadiumKo || club.stadium, coords: club.coords, type: 'stadium' })}
+                                        className={`relative w-32 h-24 shrink-0 rounded-2xl overflow-hidden border-2 cursor-pointer transition-all ${
+                                          activeLocation?.type === 'stadium' && activeLocation?.name === (club.stadiumKo || club.stadium)
+                                            ? 'border-emerald-500 shadow-xl ring-4 ring-emerald-500/20'
+                                            : 'border-white hover:border-emerald-300 hover:shadow-md'
+                                        }`}
+                                      >
+                                        <div className="absolute inset-0 bg-emerald-100 flex items-center justify-center">
+                                          <span className="text-3xl opacity-40">⚽</span>
+                                        </div>
+                                        {club.image && (
+                                          <img
+                                            src={club.image}
+                                            className="absolute inset-0 w-full h-full object-cover"
+                                            alt={club.stadiumKo || club.stadium}
+                                            onError={(e) => { e.target.remove(); }}
+                                          />
+                                        )}
+                                      </div>
+                                      <div className="flex-1 min-w-0">
+                                        <div className="flex flex-wrap items-center gap-2">
+                                          <a
+                                            href={club.website}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            onClick={(e) => e.stopPropagation()}
+                                            className="text-xl font-extrabold text-emerald-900 hover:underline transition-colors truncate"
+                                          >
+                                            {club.teamKo || club.team} ↗
+                                          </a>
+                                          <span className="text-[10px] font-extrabold uppercase tracking-[0.2em] bg-emerald-600 text-white px-3 py-1 rounded-full shrink-0">
+                                            {club.league}
+                                          </span>
+                                        </div>
+                                        <button
+                                          type="button"
+                                          onClick={() => setActiveLocation({ name: club.stadiumKo || club.stadium, coords: club.coords, type: 'stadium' })}
+                                          className={`mt-1 text-left text-sm transition-colors ${
+                                            activeLocation?.type === 'stadium' && activeLocation?.name === (club.stadiumKo || club.stadium)
+                                              ? 'text-emerald-700 font-bold'
+                                              : 'text-outline hover:text-emerald-700'
+                                          }`}
+                                        >
+                                          🏟️ {club.stadiumKo || club.stadium}
+                                          {club.capacity && <span className="text-outline/70 font-normal"> · {club.capacity}</span>}
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div className="p-6">
+                                    <div className="bg-white/80 p-4 rounded-2xl border border-emerald-100">
+                                      <p className="text-[10px] font-bold text-emerald-800 uppercase tracking-widest mb-3">유명 선수</p>
+                                      <ul className="grid grid-cols-2 gap-3">
+                                        {club.players?.map((player, pIdx) => (
+                                          <li key={pIdx} className="text-sm font-bold text-slate-700 flex items-center gap-2">
+                                            <span className="text-emerald-500">⚽</span>
+                                            {player}
+                                          </li>
+                                        ))}
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          ) : (
+                            <div className="bg-orange-50/50 rounded-2xl p-6 border-2 border-orange-100 text-primary font-medium flex items-center gap-4">
+                              <span className="text-3xl">ℹ️</span>
+                              <p>{selectedCity.football.note || '이 도시에는 라리가 소속 프로 축구팀이 없습니다.'}</p>
+                            </div>
+                          )}
+                        </section>
+                      )}
+
+                      {/* Restaurants Section */}
+                      <section>
+                        <h3 className="text-2xl font-extrabold text-primary mb-10 flex items-center gap-3 border-b-2 border-primary/10 pb-4">
+                          <span className="text-3xl">🥘</span> 맛집
+                        </h3>
+                        {[
+                          { key: 'tapas', label: '타파스 맛집', emoji: '🍷', badge: 'bg-orange-600 text-white', hover: 'hover:border-orange-400' },
+                          { key: 'fineDining', label: '파인다이닝', emoji: '✨', badge: 'bg-tertiary text-white', hover: 'hover:border-red-400' },
+                          { key: 'regional', label: '지역 특산 요리', emoji: '🍲', badge: 'bg-primary text-white', hover: 'hover:border-primary-container' },
+                          { key: 'cafes', label: '카페', emoji: '☕', badge: 'bg-stone-600 text-white', hover: 'hover:border-stone-400' },
+                          { key: 'bakeries', label: '베이커리', emoji: '🥐', badge: 'bg-yellow-600 text-white', hover: 'hover:border-yellow-400' },
+                        ].map((cat) => (
+                          <div key={cat.key} className="mb-12 last:mb-0">
+                            <h4 className="text-xl font-extrabold text-primary mb-6 flex items-center gap-2">
+                              <span className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm border border-orange-100">{cat.emoji}</span> {cat.label}
+                            </h4>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                              {(selectedCity.restaurants?.[cat.key] || []).map((rest, idx) => (
+                                <div
+                                  key={`${cat.key}-${idx}`}
+                                  onClick={() => setActiveLocation({ ...rest, type: 'restaurant', category: cat.key })}
+                                  className={`bg-white/70 rounded-[2rem] border-2 cursor-pointer transition-all overflow-hidden flex flex-col sun-kissed-glow ${
+                                    activeLocation?.type === 'restaurant' && activeLocation?.name === rest.name && activeLocation?.category === cat.key
+                                      ? 'border-primary shadow-2xl scale-105'
+                                      : `border-white shadow-md ${cat.hover}`
+                                  }`}
+                                >
+                                  {rest.image && (
+                                    <div className="relative h-44 overflow-hidden">
+                                      <img src={rest.image} alt={rest.menu || rest.name} className="w-full h-full object-cover" />
+                                      <div className="absolute top-3 left-3">
+                                        <span className={`text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-lg ${cat.badge}`}>
+                                          {cat.label}
+                                        </span>
+                                      </div>
+                                      {rest.menu && (
+                                        <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs font-bold px-2 py-1 rounded-lg backdrop-blur-sm">
+                                          대표 · {rest.menu}
+                                        </span>
+                                      )}
+                                    </div>
+                                  )}
+                                  <div className="p-5 flex flex-col flex-1">
+                                    <div className="flex justify-between items-start gap-2 mb-3">
+                                      <div>
+                                        <h4 className="font-extrabold text-primary text-lg leading-tight">{rest.name}</h4>
+                                      </div>
+                                      <div className="flex-shrink-0 flex items-center gap-1.5 bg-primary text-white px-3 py-1.5 rounded-xl shadow-lg border border-white/20">
+                                        <span className="text-yellow-400 text-sm">★</span>
+                                        <span className="text-sm font-bold">{rest.rating}</span>
+                                      </div>
+                                    </div>
+                                    <p className="text-sm text-outline font-medium mb-5 flex-1 leading-relaxed">{rest.desc}</p>
+                                    <div className="flex flex-wrap gap-2 mt-auto">
+                                      <button
+                                        onClick={(e) => openGoogleMaps(e, rest.name, selectedCity.nameEn)}
+                                        className="text-[11px] font-bold text-secondary bg-white border border-secondary/20 px-3 py-2 rounded-xl transition-all hover:bg-secondary hover:text-white flex items-center gap-1.5"
+                                      >
+                                        📍 Google Maps
+                                      </button>
+                                      {rest.blogUrl && (
+                                        <a
+                                          href={rest.blogUrl}
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                          onClick={(e) => e.stopPropagation()}
+                                          className="text-[11px] font-bold text-[#03C75A] bg-white border border-[#03C75A]/30 px-3 py-2 rounded-xl transition-all hover:bg-[#03C75A] hover:text-white flex items-center gap-1.5"
+                                        >
+                                          📝 {rest.blogTitle || '네이버 블로그'}
+                                        </a>
+                                      )}
+                                    </div>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
+                      </section>
+
+                      {/* YouTube Section */}
+                      <section className="pb-12">
+                        <h3 className="text-2xl font-extrabold text-primary mb-8 flex items-center gap-3 border-b-2 border-primary/10 pb-4">
+                          <span className="text-3xl">📺</span> Vlog
+                        </h3>
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                           {selectedCity.youtubeLinks?.map((vid, idx) => (
+                             <a 
+                               key={idx} 
+                               href={vid.url} 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               className="block group bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all border-4 border-white sun-kissed-glow"
+                             >
+                               <div className="relative h-40 overflow-hidden">
+                                 <img src={vid.thumb} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt={vid.title} />
+                                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                                   <div className="w-14 h-14 bg-tertiary rounded-full flex items-center justify-center shadow-2xl scale-90 group-hover:scale-100 transition-transform duration-500">
+                                     <div className="w-0 h-0 border-t-8 border-t-transparent border-l-[16px] border-l-white border-b-8 border-b-transparent ml-1"></div>
+                                   </div>
+                                 </div>
+                               </div>
+                               <div className="p-4">
+                                 <h4 className="font-extrabold text-sm text-primary line-clamp-2 group-hover:text-tertiary transition-colors">{vid.title}</h4>
+                                 <p className="text-[10px] text-outline mt-2 font-bold uppercase tracking-widest">YouTube에서 보기 ↗</p>
+                               </div>
+                             </a>
+                           ))}
+                        </div>
+                      </section>
+
+                    </div>
+                  </motion.div>
+                )}
+
+                {/* 3. EXCEL SHEET VIEW */}
+                {activeTab !== "guide" && currentExcelSheet && (
+                  <motion.div 
+                    key="excel-sheet"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    className="h-full flex flex-col"
+                  >
+                    <div className="bg-white/50 px-8 py-6 border-b border-white/50 flex justify-between items-center backdrop-blur-md shrink-0 relative overflow-hidden">
+                       <div className="absolute inset-0 azulejo-pattern opacity-[0.03] pointer-events-none"></div>
+                       <div className="relative z-10">
+                         <h2 className="text-2xl font-extrabold text-primary tracking-tight">{currentExcelSheet.name}</h2>
+                         <p className="text-xs text-outline mt-1 font-bold uppercase tracking-widest">Excel Itinerary Data</p>
+                       </div>
+                       <span className="relative z-10 text-xs font-extrabold bg-primary text-white px-5 py-2 rounded-full shadow-lg">
+                         {currentExcelSheet.data.length} Items
+                       </span>
+                    </div>
+
+                    <div className="overflow-x-auto flex-1 p-4">
+                      <div className="rounded-[2rem] overflow-hidden border-2 border-white shadow-xl">
+                        <table className="w-full text-left border-collapse bg-white/40">
+                          <thead>
+                            <tr className="bg-primary/5">
+                              {currentExcelSheet.columns.map((col, i) => (
+                                <th key={i} className="px-6 py-4 text-[11px] font-extrabold uppercase tracking-[0.15em] text-primary border-b border-white/60 sticky top-0 bg-white/80 backdrop-blur-md z-10 whitespace-nowrap">
+                                  {col}
+                                </th>
+                              ))}
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-white/40">
+                            {currentExcelSheet.data.map((row, rIdx) => (
+                              <tr key={rIdx} className="hover:bg-primary/5 transition-colors duration-200">
+                                {currentExcelSheet.columns.map((col, cIdx) => (
+                                  <td key={cIdx} className="px-6 py-4 text-sm text-on-surface font-semibold whitespace-pre-wrap">
+                                    {row[col] !== undefined && row[col] !== null ? String(row[col]) : ''}
+                                  </td>
+                                ))}
+                              </tr>
+                            ))}
+                            {currentExcelSheet.data.length === 0 && (
+                              <tr>
+                                <td colSpan={Math.max(currentExcelSheet.columns.length, 1)} className="px-6 py-20 text-center">
+                                  <div className="text-6xl mb-6 opacity-30">📭</div>
+                                  <div className="text-primary font-bold text-xl">No data in this sheet.</div>
+                                </td>
+                              </tr>
+                            )}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+            </div>
+          </div>
+        </div>
+      );
+    };
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>
